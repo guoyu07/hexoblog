@@ -1,11 +1,13 @@
 <div id="cover">
 	<div id="profile" alt="<% if (theme.cover.enable) { %><%= theme.cover.url%><% } %>">
-		<a href="<%-config.root%>">
-			<div id="title"><%-config.title%></div>
-		</a>
+		<div href="<%-config.root%>" id="title" class="title">
+			<a class="title_link"><%-config.title%><i>ME</i></a>
+		</div>
 
 		<% if (config.subtitle) {%>
-			<div id="subtitle"><%- config.subtitle %></div>
+			<div id="subtitle" class="subtitle">
+				<span class="subtitle_content"><%- config.subtitle %></span>
+			</div>
 		<% } %>
 		<%- partial('_partial/social') %>
 	</div>

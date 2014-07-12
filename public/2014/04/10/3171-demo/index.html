@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>input绑定keyup or keydown事件发送延时请求 | wilee.me</title>
+  <title>input绑定keyup or keydown事件发送延时请求 | Wilee</title>
   <meta name="author" content="xiongwilee">
   
   <meta name="description" content="blog">
@@ -12,14 +12,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="input绑定keyup or keydown事件发送延时请求"/>
-  <meta property="og:site_name" content="wilee.me"/>
+  <meta property="og:site_name" content="Wilee"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
 <!--   <link href="/favicon.ico" rel="icon"> -->
-  <link rel="alternate" href="/atom.xml" title="wilee.me" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Wilee" type="application/atom+xml">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css">
 <link rel="stylesheet" href="/css/style.css" type="text/css">
@@ -44,24 +44,10 @@
   </header>
   <div id="content" class="container">
     <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
   <div class="post-content">
     <header>
       
-      <time datetime="2014-04-10T11:14:16.000Z"><a href="/2014/04/10/3171-demo/">周四, 4月 10 2014, 7:14:16 晚上</a></time>
-
+      
   
     <h1 class="title">input绑定keyup or keydown事件发送延时请求</h1>
   
@@ -74,9 +60,23 @@
     <a href="/tags/Example/">Example</a>
   </div>
 
+<time datetime="2014-04-10T11:14:16.000Z"><a href="/2014/04/10/3171-demo/">2014-04-10 07:14</a></time>
 <div class="clear"></div>
       
     </header>
+    
+      <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"><i class="fa fa-chevron-left"></i></div>
+    <div class="next"><i class="fa fa-chevron-right"></i></div>
+  </div>
+</div>
+    
     <div class="entry">
       
         <p>input框输入的时候如果需要异步请求资源做autosuggest功能或者其他情况的话就需要绑定keyup/keydown/keypress事件，在键入的过程中根据用户输入的内容通过异步接口获取对应suggest信息，例如：</p>
@@ -137,10 +137,12 @@
 
 
 <section id="comment">
-  <h1 class="title">留言</h1>
+  <!-- <h1 class="title fa fa-comments"></h1> -->
 
   
-      
+      <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-thread-key="/2014/04/10/3171-demo/"></div>
+<!-- Duoshuo Comment END -->
   
 </section>
 
@@ -162,24 +164,6 @@ Powered by <a href="http://zespia.tw/hexo/" title="Hexo" target="_blank" rel="ex
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js" type="text/javascript"></script>
 
 
-
-
-    <script type="text/javascript">
-        (function(){
-
-            $(window).scroll(function(){
-
-                var scrollTop = $(window).scrollTop();
-                if ( scrollTop >200 ){
-                    $("#main-nav").removeClass('normal_mode').addClass('top_mode');
-                } else{
-                    $("#main-nav").removeClass('top_mode').addClass('normal_mode');
-                }
-
-            });
-
-        })();
-    </script>
 
 
 
@@ -213,18 +197,6 @@ Powered by <a href="http://zespia.tw/hexo/" title="Hexo" target="_blank" rel="ex
 <script type="text/javascript">
   
   $(function(){
-
-    $('.title').hover(
-      function() {      
-        $(this).stop().animate(
-          {'marginLeft': '10px'}, 200
-        );   
-      }, 
-      function() {       
-        $(this).stop().animate({'marginLeft': '0px'}, 200);      
-      
-    });   
-
   });
 
 </script>

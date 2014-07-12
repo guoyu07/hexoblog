@@ -9,13 +9,9 @@ git和svn不同的地方有一个索引的概念，需要把修改点提交到�
 
 
 - git入门: [http://rogerdudler.github.io/git-guide/index.zh.html](http://rogerdudler.github.io/git-guide/index.zh.html)
-
 - git详细:[http://www.cnblogs.com/zhangjing230/archive/2012/05/09/2489745.html#gitdefintion](http://www.cnblogs.com/zhangjing230/archive/2012/05/09/2489745.html#gitdefintion) 
-
 - git总结[http://webzhangnan.github.io/2014/03/28/git-%E5%85%A5%E9%97%A8/](http://webzhangnan.github.io/2014/03/28/git-%E5%85%A5%E9%97%A8/)
-
 - first:[http://www.csser.com/board/4f53875c55bdcb545c000d05](http://www.csser.com/board/4f53875c55bdcb545c000d05)
-
 - second: [http://my.oschina.net/meilihao/blog/157716](http://my.oschina.net/meilihao/blog/157716)
 - jekyll git page:[搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html) 
 - 中文介绍jeykyll详细:[http://jekyllcn.com/](http://jekyllcn.com/)

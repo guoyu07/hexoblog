@@ -11,7 +11,7 @@ cover:
    
 excerpt_link: 更多
 
-full_format: 'ddd, MMM D YYYY, h:mm:ss a'
+full_format: 'YYYY-MM-DD hh:mm'
 
 addthis:
   enable: true

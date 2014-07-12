@@ -15,24 +15,6 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 </script>
 <% } %>
 
-<% if (theme.auto_change.enable=true) {%>
-    <script type="text/javascript">
-        (function(){
-
-            $(window).scroll(function(){
-
-                var scrollTop = $(window).scrollTop();
-                if ( scrollTop >200 ){
-                    $("#main-nav").removeClass('normal_mode').addClass('top_mode');
-                } else{
-                    $("#main-nav").removeClass('top_mode').addClass('normal_mode');
-                }
-
-            });
-
-        })();
-    </script>
-<% } %>
 
 <% if (theme.fancybox){ %>
   <link rel="stylesheet" href="<%- config.root %>fancybox/jquery.fancybox.css" media="screen" type="text/css">
@@ -65,18 +47,6 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 <script type="text/javascript">
   
   $(function(){
-
-    $('.title').hover(
-      function() {      
-        $(this).stop().animate(
-          {'marginLeft': '10px'}, 200
-        );   
-      }, 
-      function() {       
-        $(this).stop().animate({'marginLeft': '0px'}, 200);      
-      
-    });   
-
   });
 
 </script>

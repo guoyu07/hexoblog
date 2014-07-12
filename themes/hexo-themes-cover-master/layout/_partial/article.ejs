@@ -1,13 +1,13 @@
 <article class="<%= item.layout %>">
-  <% if (item.photos){ %>
-    <%- partial('post/gallery') %>
-  <% } %>
   <div class="post-content">
     <header>
       <% if (item.layout != 'page'){ %>
       <%- partial('post/title') %>
       <% } %>
     </header>
+    <% if (item.photos){ %>
+      <%- partial('post/gallery') %>
+    <% } %>
     <div class="entry">
       <% if (item.excerpt && index){ %>
         <%- item.excerpt %>

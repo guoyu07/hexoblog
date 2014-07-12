@@ -1,7 +1,9 @@
 title: photo
-date: 2014-07-06 17:17:26
+date: 2013-07-06 17:17:26
 tags:
 photos:
-- http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg
-- http://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg
+- http://xiongwilee.qiniudn.com/blog_IMG_8399.jpg
+- http://xiongwilee.qiniudn.com/blog_IMG_8277.jpg
+- http://xiongwilee.qiniudn.com/blog_IMG_8296.jpg
+- http://xiongwilee.qiniudn.com/blog_IMG_8323.jpg
 ---
