@@ -1,5 +1,5 @@
-date: 2014-07-11 02:09:26.426
-argv: node /usr/local/bin/hexo s
+date: 2014-07-12 15:48:24.093
+argv: node /usr/local/bin/hexo d -g
 os: Darwin 13.2.0 darwin x64
 version:
   hexo: 2.7.1
@@ -13,96 +13,252 @@ version:
   openssl: 1.0.1e
 ---
 
-[debug] 02:09:25.712 Processed: page.md
-[debug] 02:09:25.713 Processed: draft.md
-[debug] 02:09:25.713 Processed: photo.md
-[debug] 02:09:25.713 Processed: post.md
-[debug] 02:09:25.713 Config file loaded
-[debug] 02:09:25.714 Version info checked successfully
-[debug] 02:09:25.728 Loading database.
-[debug] 02:09:25.766 Plugin loaded successfully: hexo-renderer-ejs
-[debug] 02:09:25.782 Plugin loaded successfully: hexo-renderer-marked
-[debug] 02:09:25.898 Plugin loaded successfully: hexo-renderer-stylus
-[debug] 02:09:25.945 Processed: LICENSE
-[debug] 02:09:25.945 Processed: README.md
-[debug] 02:09:25.974 Processed: source/css/_base/layout.styl
-[debug] 02:09:25.974 Processed: source/css/_base/utils.styl
-[debug] 02:09:25.974 Processed: source/css/_base/variable.styl
-[debug] 02:09:25.974 Processed: source/css/_partial/article.styl
-[debug] 02:09:25.974 Processed: source/css/_partial/archive.styl
-[debug] 02:09:25.974 Processed: source/css/_partial/comment.styl
-[debug] 02:09:25.974 Processed: source/css/_partial/footer.styl
-[debug] 02:09:25.974 Processed: source/css/_partial/header.styl
-[debug] 02:09:25.974 Processed: source/css/_partial/index.styl
-[debug] 02:09:25.974 Processed: source/css/_partial/sidebar.styl
-[debug] 02:09:25.974 Processed: source/css/_partial/syntax.styl
-[debug] 02:09:25.975 Processed: source/logo.png
-[debug] 02:09:25.976 Processed: source/fancybox/blank.gif
-[debug] 02:09:25.976 Processed: source/fancybox/fancybox_loading.gif
-[debug] 02:09:25.977 Processed: source/fancybox/fancybox_loading@2x.gif
-[debug] 02:09:25.977 Processed: source/fancybox/fancybox_overlay.png
-[debug] 02:09:25.977 Processed: source/fancybox/fancybox_sprite.png
-[debug] 02:09:25.978 Processed: source/fancybox/fancybox_sprite@2x.png
-[debug] 02:09:25.978 Processed: source/fancybox/jquery.fancybox.css
-[debug] 02:09:25.979 Processed: source/fancybox/jquery.fancybox.pack.js
-[debug] 02:09:25.979 Processed: source/image/bg_0.jpg
-[debug] 02:09:25.979 Processed: source/image/bg_1.jpg
-[debug] 02:09:25.980 Processed: source/js/bootstrap.min.js
-[debug] 02:09:25.980 Processed: source/js/cover.js
-[debug] 02:09:25.981 Processed: source/js/gallery.js
-[debug] 02:09:25.981 Processed: source/js/jquery.anystretch.min.js
-[debug] 02:09:25.982 Processed: source/js/jquery.imagesloaded.min.js
-[debug] 02:09:25.983 Processed: source/css/style.styl
-[debug] 02:09:25.999 Processed: layout/about.ejs
-[debug] 02:09:25.999 Processed: layout/archive.ejs
-[debug] 02:09:25.999 Processed: layout/blog.ejs
-[debug] 02:09:25.999 Processed: layout/category.ejs
-[debug] 02:09:25.999 Processed: layout/index.ejs
-[debug] 02:09:25.999 Processed: layout/layout.ejs
-[debug] 02:09:25.999 Processed: layout/page.ejs
-[debug] 02:09:25.999 Processed: layout/post.ejs
-[debug] 02:09:25.999 Processed: layout/tag.ejs
-[debug] 02:09:25.999 Processed: layout/_widget/category.ejs
-[debug] 02:09:25.999 Processed: layout/_widget/recent_posts.ejs
-[debug] 02:09:25.999 Processed: layout/_widget/search.ejs
-[debug] 02:09:26.000 Processed: layout/_widget/tag.ejs
-[debug] 02:09:26.000 Processed: layout/_widget/tagcloud.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/about.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/after_footer.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/archive.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/article.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/comment.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/duoshuo_comment.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/footer.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/google_analytics.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/head.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/header.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/pagination.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/sidebar.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/social.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/post/category.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/post/gallery.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/post/share.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/post/tag.ejs
-[debug] 02:09:26.000 Processed: layout/_partial/post/title.ejs
-[debug] 02:09:26.012 Theme config loaded
-[debug] 02:09:26.012 Processed: _config.yml
-[debug] 02:09:26.013 Processed: languages/de.yml
-[debug] 02:09:26.014 Processed: languages/default.yml
-[debug] 02:09:26.014 Processed: languages/es.yml
-[debug] 02:09:26.014 Processed: languages/zh-CN.yml
-[debug] 02:09:26.015 Processed: languages/zh-TW.yml
-[error] 02:09:26.389 HexoError: Process failed: _posts/3163-twitter.md
-Error: Reserved keyword "if" attempted to be used as a variable on line 6 in file /Users/xiongweilie/projects/blog/blog/source/_posts/3163-twitter.md.
-    at Object.exports.throwError (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/utils.js:183:9)
-    at Object.TokenParser.parseVar (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:374:13)
-    at Object.TokenParser.parseToken (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:286:12)
-    at /usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:86:12
-    at Object.exports.each (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/utils.js:45:11)
-    at Object.TokenParser.parse (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:76:11)
-    at parseVariable (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:486:18)
-    at /usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:633:15
-    at Object.exports.each (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/utils.js:45:11)
-    at Object.exports.parse (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:622:9)
-
-[debug] 02:09:26.426 Cache saved
+[debug] 15:48:22.756 Processed: page.md
+[debug] 15:48:22.756 Processed: draft.md
+[debug] 15:48:22.756 Processed: photo.md
+[debug] 15:48:22.756 Processed: post.md
+[debug] 15:48:22.756 Config file loaded
+[debug] 15:48:22.757 Version info checked successfully
+[debug] 15:48:22.771 Loading database.
+[debug] 15:48:22.807 Plugin loaded successfully: hexo-renderer-ejs
+[debug] 15:48:22.821 Plugin loaded successfully: hexo-renderer-marked
+[debug] 15:48:22.931 Plugin loaded successfully: hexo-renderer-stylus
+[debug] 15:48:23.034 Processed: LICENSE
+[debug] 15:48:23.034 Processed: README.md
+[debug] 15:48:23.107 Processed: source/css/_base/layout.styl
+[debug] 15:48:23.107 Processed: source/css/_base/utils.styl
+[debug] 15:48:23.107 Processed: source/css/_base/variable.styl
+[debug] 15:48:23.107 Processed: source/css/_partial/archive.styl
+[debug] 15:48:23.107 Processed: source/css/_partial/article.styl
+[debug] 15:48:23.107 Processed: source/css/_partial/comment.styl
+[debug] 15:48:23.108 Processed: source/css/_partial/footer.styl
+[debug] 15:48:23.108 Processed: source/css/_partial/header.styl
+[debug] 15:48:23.108 Processed: source/css/_partial/index.styl
+[debug] 15:48:23.108 Processed: source/css/_partial/sidebar.styl
+[debug] 15:48:23.108 Processed: source/css/_partial/syntax.styl
+[debug] 15:48:23.119 Processed: source/logo.png
+[debug] 15:48:23.119 Processed: source/fancybox/blank.gif
+[debug] 15:48:23.120 Processed: source/fancybox/fancybox_loading.gif
+[debug] 15:48:23.121 Processed: source/fancybox/fancybox_loading@2x.gif
+[debug] 15:48:23.121 Processed: source/fancybox/fancybox_overlay.png
+[debug] 15:48:23.122 Processed: source/fancybox/fancybox_sprite.png
+[debug] 15:48:23.123 Processed: source/fancybox/fancybox_sprite@2x.png
+[debug] 15:48:23.124 Processed: source/fancybox/jquery.fancybox.css
+[debug] 15:48:23.125 Processed: source/fancybox/jquery.fancybox.pack.js
+[debug] 15:48:23.126 Processed: source/image/bg_0.jpg
+[debug] 15:48:23.127 Processed: source/image/bg_1.jpg
+[debug] 15:48:23.128 Processed: source/js/bootstrap.min.js
+[debug] 15:48:23.130 Processed: source/js/cover.js
+[debug] 15:48:23.131 Processed: source/js/gallery.js
+[debug] 15:48:23.132 Processed: source/js/jquery.anystretch.min.js
+[debug] 15:48:23.133 Processed: source/js/jquery.imagesloaded.min.js
+[debug] 15:48:23.136 Processed: source/css/style.styl
+[debug] 15:48:23.165 Processed: layout/about.ejs
+[debug] 15:48:23.166 Processed: layout/archive.ejs
+[debug] 15:48:23.166 Processed: layout/blog.ejs
+[debug] 15:48:23.166 Processed: layout/category.ejs
+[debug] 15:48:23.166 Processed: layout/index.ejs
+[debug] 15:48:23.166 Processed: layout/layout.ejs
+[debug] 15:48:23.166 Processed: layout/page.ejs
+[debug] 15:48:23.166 Processed: layout/post.ejs
+[debug] 15:48:23.166 Processed: layout/tag.ejs
+[debug] 15:48:23.166 Processed: layout/_widget/category.ejs
+[debug] 15:48:23.166 Processed: layout/_widget/recent_posts.ejs
+[debug] 15:48:23.166 Processed: layout/_widget/search.ejs
+[debug] 15:48:23.166 Processed: layout/_widget/tag.ejs
+[debug] 15:48:23.166 Processed: layout/_widget/tagcloud.ejs
+[debug] 15:48:23.166 Processed: layout/_partial/about.ejs
+[debug] 15:48:23.166 Processed: layout/_partial/after_footer.ejs
+[debug] 15:48:23.166 Processed: layout/_partial/archive.ejs
+[debug] 15:48:23.166 Processed: layout/_partial/article.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/comment.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/duoshuo_comment.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/footer.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/google_analytics.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/head.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/header.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/pagination.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/sidebar.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/social.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/post/category.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/post/gallery.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/post/share.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/post/tag.ejs
+[debug] 15:48:23.167 Processed: layout/_partial/post/title.ejs
+[debug] 15:48:23.201 Theme config loaded
+[debug] 15:48:23.202 Processed: _config.yml
+[debug] 15:48:23.202 Processed: languages/de.yml
+[debug] 15:48:23.203 Processed: languages/default.yml
+[debug] 15:48:23.203 Processed: languages/es.yml
+[debug] 15:48:23.205 Processed: languages/zh-CN.yml
+[debug] 15:48:23.207 Processed: languages/zh-TW.yml
+[debug] 15:48:23.661 Processed: _posts/3144-customizing-the-page-layout.md
+[debug] 15:48:23.661 Processed: _posts/3145-where-to-put-your-files-less-jade-css-images.md
+[debug] 15:48:23.661 Processed: _posts/3148-extending-appjs.md
+[debug] 15:48:23.661 Processed: _posts/3149-2-steps-to-get-node-blog-running.md
+[debug] 15:48:23.661 Processed: _posts/3151-wileetest.md
+[debug] 15:48:23.661 Processed: _posts/3152-pm.md
+[debug] 15:48:23.661 Processed: _posts/3153-fe.md
+[debug] 15:48:23.661 Processed: _posts/3154-fe.md
+[debug] 15:48:23.661 Processed: _posts/3155-fe.md
+[debug] 15:48:23.661 Processed: _posts/3156-life.md
+[debug] 15:48:23.661 Processed: _posts/3157-life.md
+[debug] 15:48:23.661 Processed: _posts/3158-fe.md
+[debug] 15:48:23.661 Processed: _posts/3159-life.md
+[debug] 15:48:23.661 Processed: _posts/3160-life.md
+[debug] 15:48:23.661 Processed: _posts/3161-life.md
+[debug] 15:48:23.661 Processed: _posts/3163-twitter.md
+[debug] 15:48:23.661 Processed: _posts/3166-life.md
+[debug] 15:48:23.661 Processed: _posts/3167-javascript.md
+[debug] 15:48:23.661 Processed: _posts/3168-webapp.md
+[debug] 15:48:23.661 Processed: _posts/3170-interview.md
+[debug] 15:48:23.661 Processed: _posts/3171-demo.md
+[debug] 15:48:23.661 Processed: _posts/3173-javascript.md
+[debug] 15:48:23.661 Processed: _posts/hello-git.md
+[debug] 15:48:23.661 Processed: _posts/photo.md
+[info] 15:48:23.708 Files loaded in 0.770s
+[debug] 15:48:23.718 Cache saved
+[debug] 15:48:23.721 Public folder cleared: archives/index.html,archives/page/2/index.html,archives/page/3/index.html,archives/2014/index.html,archives/2014/page/2/index.html,archives/2014/page/3/index.html,archives/2014/01/index.html,archives/2014/03/index.html,archives/2014/04/index.html,archives/2014/07/index.html,index.html,page/2/index.html,page/3/index.html,2014/07/06/photo/index.html,2014/07/05/hello-git/index.html,2014/07/05/3151-wileetest/index.html,2014/07/05/3149-2-steps-to-get-node-blog-running/index.html,2014/07/05/3148-extending-appjs/index.html,2014/07/05/3145-where-to-put-your-files-less-jade-css-images/index.html,2014/07/05/3144-customizing-the-page-layout/index.html,2014/07/05/3152-pm/index.html,2014/04/10/3173-javascript/index.html,2014/04/10/3171-demo/index.html,2014/04/10/3170-interview/index.html,2014/03/25/3168-webapp/index.html,2014/03/20/3167-javascript/index.html,2014/03/01/3166-life/index.html,2014/01/14/3163-twitter/index.html,2014/01/12/3161-life/index.html,2014/01/12/3160-life/index.html,2014/01/12/3159-life/index.html,2014/01/12/3158-fe/index.html,2014/01/12/3157-life/index.html,2014/01/12/3156-life/index.html,2014/01/12/3155-fe/index.html,2014/01/12/3154-fe/index.html,2014/01/12/3153-fe/index.html,tags/life/index.html,tags/life,-味道/index.html,tags/life,-压力/index.html,tags/life,-正义感/index.html,tags/fe,-web/index.html,tags/pm,-产品形态/index.html,tags/fe,-upload/index.html,tags/fe,-chrome/index.html,tags/fe,-demo/index.html,tags/life,-棱角/index.html,tags/life,-poem/index.html,tags/fe/index.html,tags/life,-2014/index.html,tags/node/index.html,tags/Example/index.html,js/script.js,css/style.css,css/fonts/FontAwesome.otf,css/fonts/fontawesome-webfont.eot,css/fonts/fontawesome-webfont.svg,css/fonts/fontawesome-webfont.woff,css/fonts/fontawesome-webfont.ttf,css/images/banner.jpg,fancybox/blank.gif,fancybox/fancybox_loading.gif,fancybox/fancybox_loading@2x.gif,fancybox/fancybox_overlay.png,fancybox/fancybox_sprite.png,fancybox/fancybox_sprite@2x.png,fancybox/jquery.fancybox.css,fancybox/jquery.fancybox.js,fancybox/jquery.fancybox.pack.js,fancybox/helpers/fancybox_buttons.png,fancybox/helpers/jquery.fancybox-buttons.css,fancybox/helpers/jquery.fancybox-buttons.js,fancybox/helpers/jquery.fancybox-media.js,fancybox/helpers/jquery.fancybox-thumbs.css,fancybox/helpers/jquery.fancybox-thumbs.js,logo.png,js/bootstrap.min.js,js/cover.js,js/jquery.anystretch.min.js,js/gallery.js,js/jquery.imagesloaded.min.js,image/bg_0.jpg,image/bg_1.jpg
+[debug] 15:48:23.722 Render archive: archives/
+[debug] 15:48:23.724 Render archive: archives/page/2/
+[debug] 15:48:23.724 Render archive: archives/page/3/
+[debug] 15:48:23.725 Render archive: archives/2014/
+[debug] 15:48:23.725 Render archive: archives/2014/page/2/
+[debug] 15:48:23.725 Render archive: archives/2014/page/3/
+[debug] 15:48:23.725 Render archive: archives/2014/01/
+[debug] 15:48:23.725 Render archive: archives/2014/03/
+[debug] 15:48:23.725 Render archive: archives/2014/04/
+[debug] 15:48:23.725 Render archive: archives/2014/07/
+[debug] 15:48:23.726 Render index: 
+[debug] 15:48:23.726 Render index: page/2/
+[debug] 15:48:23.726 Render index: page/3/
+[debug] 15:48:23.726 Render post: 2014/07/06/photo/
+[debug] 15:48:23.726 Render post: 2014/07/05/hello-git/
+[debug] 15:48:23.727 Render post: 2014/07/05/3151-wileetest/
+[debug] 15:48:23.727 Render post: 2014/07/05/3149-2-steps-to-get-node-blog-running/
+[debug] 15:48:23.727 Render post: 2014/07/05/3148-extending-appjs/
+[debug] 15:48:23.727 Render post: 2014/07/05/3145-where-to-put-your-files-less-jade-css-images/
+[debug] 15:48:23.727 Render post: 2014/07/05/3144-customizing-the-page-layout/
+[debug] 15:48:23.727 Render post: 2014/07/05/3152-pm/
+[debug] 15:48:23.727 Render post: 2014/04/10/3173-javascript/
+[debug] 15:48:23.727 Render post: 2014/04/10/3171-demo/
+[debug] 15:48:23.727 Render post: 2014/04/10/3170-interview/
+[debug] 15:48:23.727 Render post: 2014/03/25/3168-webapp/
+[debug] 15:48:23.728 Render post: 2014/03/20/3167-javascript/
+[debug] 15:48:23.728 Render post: 2014/03/01/3166-life/
+[debug] 15:48:23.728 Render post: 2014/01/14/3163-twitter/
+[debug] 15:48:23.728 Render post: 2014/01/12/3161-life/
+[debug] 15:48:23.728 Render post: 2014/01/12/3160-life/
+[debug] 15:48:23.728 Render post: 2014/01/12/3159-life/
+[debug] 15:48:23.728 Render post: 2014/01/12/3158-fe/
+[debug] 15:48:23.728 Render post: 2014/01/12/3157-life/
+[debug] 15:48:23.729 Render post: 2014/01/12/3156-life/
+[debug] 15:48:23.729 Render post: 2014/01/12/3155-fe/
+[debug] 15:48:23.729 Render post: 2014/01/12/3154-fe/
+[debug] 15:48:23.729 Render post: 2014/01/12/3153-fe/
+[debug] 15:48:23.729 Render tag: tags/life/
+[debug] 15:48:23.729 Render tag: tags/life,-味道/
+[debug] 15:48:23.729 Render tag: tags/life,-压力/
+[debug] 15:48:23.729 Render tag: tags/life,-正义感/
+[debug] 15:48:23.729 Render tag: tags/fe,-web/
+[debug] 15:48:23.729 Render tag: tags/pm,-产品形态/
+[debug] 15:48:23.729 Render tag: tags/fe,-upload/
+[debug] 15:48:23.729 Render tag: tags/fe,-chrome/
+[debug] 15:48:23.730 Render tag: tags/fe,-demo/
+[debug] 15:48:23.730 Render tag: tags/life,-棱角/
+[debug] 15:48:23.730 Render tag: tags/life,-poem/
+[debug] 15:48:23.730 Render tag: tags/fe/
+[debug] 15:48:23.730 Render tag: tags/life,-2014/
+[debug] 15:48:23.730 Render tag: tags/node/
+[debug] 15:48:23.730 Render tag: tags/Example/
+[warn] 15:48:23.883 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.886 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.888 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.890 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.892 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.895 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.897 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.899 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.901 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.903 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.906 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.908 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.911 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.913 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.915 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.917 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.919 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.921 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.924 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.926 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.928 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.930 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.932 Partial _partial/duoshuo_comment.ejs does not exist
+[warn] 15:48:23.938 Partial _partial/duoshuo_comment.ejs does not exist
+[create] 15:48:24.063 Public: archives/page/3/index.html
+[create] 15:48:24.064 Public: archives/page/2/index.html
+[create] 15:48:24.065 Public: archives/2014/index.html
+[create] 15:48:24.066 Public: archives/2014/page/2/index.html
+[create] 15:48:24.066 Public: archives/2014/page/3/index.html
+[create] 15:48:24.067 Public: archives/2014/01/index.html
+[create] 15:48:24.067 Public: archives/2014/03/index.html
+[create] 15:48:24.067 Public: archives/2014/04/index.html
+[create] 15:48:24.068 Public: logo.png
+[create] 15:48:24.069 Public: archives/2014/07/index.html
+[create] 15:48:24.071 Public: archives/index.html
+[create] 15:48:24.072 Public: 2014/07/06/photo/index.html
+[create] 15:48:24.072 Public: page/3/index.html
+[create] 15:48:24.073 Public: page/2/index.html
+[create] 15:48:24.073 Public: index.html
+[create] 15:48:24.074 Public: 2014/07/05/3148-extending-appjs/index.html
+[create] 15:48:24.074 Public: 2014/07/05/3149-2-steps-to-get-node-blog-running/index.html
+[create] 15:48:24.074 Public: 2014/07/05/hello-git/index.html
+[create] 15:48:24.075 Public: 2014/07/05/3151-wileetest/index.html
+[create] 15:48:24.075 Public: 2014/07/05/3145-where-to-put-your-files-less-jade-css-images/index.html
+[create] 15:48:24.075 Public: 2014/07/05/3144-customizing-the-page-layout/index.html
+[create] 15:48:24.075 Public: 2014/07/05/3152-pm/index.html
+[create] 15:48:24.076 Public: 2014/04/10/3173-javascript/index.html
+[create] 15:48:24.076 Public: 2014/04/10/3170-interview/index.html
+[create] 15:48:24.077 Public: 2014/04/10/3171-demo/index.html
+[create] 15:48:24.077 Public: 2014/03/20/3167-javascript/index.html
+[create] 15:48:24.077 Public: 2014/03/25/3168-webapp/index.html
+[create] 15:48:24.078 Public: 2014/01/14/3163-twitter/index.html
+[create] 15:48:24.078 Public: 2014/03/01/3166-life/index.html
+[create] 15:48:24.078 Public: 2014/01/12/3161-life/index.html
+[create] 15:48:24.078 Public: 2014/01/12/3160-life/index.html
+[create] 15:48:24.079 Public: 2014/01/12/3158-fe/index.html
+[create] 15:48:24.079 Public: 2014/01/12/3159-life/index.html
+[create] 15:48:24.080 Public: 2014/01/12/3157-life/index.html
+[create] 15:48:24.080 Public: 2014/01/12/3156-life/index.html
+[create] 15:48:24.080 Public: 2014/01/12/3154-fe/index.html
+[create] 15:48:24.081 Public: tags/life/index.html
+[create] 15:48:24.082 Public: 2014/01/12/3155-fe/index.html
+[create] 15:48:24.082 Public: tags/life,-味道/index.html
+[create] 15:48:24.082 Public: 2014/01/12/3153-fe/index.html
+[create] 15:48:24.082 Public: tags/life,-压力/index.html
+[create] 15:48:24.082 Public: tags/life,-正义感/index.html
+[create] 15:48:24.083 Public: tags/fe,-web/index.html
+[create] 15:48:24.083 Public: tags/pm,-产品形态/index.html
+[create] 15:48:24.083 Public: tags/fe,-upload/index.html
+[create] 15:48:24.083 Public: tags/fe,-chrome/index.html
+[create] 15:48:24.084 Public: tags/fe,-demo/index.html
+[create] 15:48:24.084 Public: tags/life,-棱角/index.html
+[create] 15:48:24.084 Public: tags/life,-poem/index.html
+[create] 15:48:24.085 Public: tags/life,-2014/index.html
+[create] 15:48:24.085 Public: tags/fe/index.html
+[create] 15:48:24.085 Public: tags/node/index.html
+[create] 15:48:24.085 Public: tags/Example/index.html
+[info] 15:48:24.085 53 files generated in 0.376s
+[info] 15:48:24.089 Start deploying: null
+[error] 15:48:24.090 TypeError: Property 'null' of object #<Object> is not a function
+TypeError: Property 'null' of object #<Object> is not a function
+    at /usr/local/lib/node_modules/hexo/lib/plugins/console/deploy.js:72:21
+    at iterate (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:149:13)
+    at Object.async.eachSeries (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:165:9)
+    at /usr/local/lib/node_modules/hexo/lib/plugins/console/deploy.js:67:11
+    at /usr/local/lib/node_modules/hexo/lib/plugins/console/generate/index.js:213:11
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:454:17
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:444:17
+    at Array.forEach (native)
+    at _each (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:46:24)
+    at Object.taskComplete (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:443:13)

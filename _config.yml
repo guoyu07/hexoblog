@@ -4,11 +4,11 @@
 
 # Site
 title: wilee.me
-subtitle:
-description:
-author: John Doe
-email:
-language:
+subtitle: 知而获智，智达高远
+description: blog
+author: xiongwilee
+email: wilee@outlook.com
+language: zh-CN
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -87,4 +87,6 @@ exclude_generator:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: github
+  repo: git@github.com:xiongwilee/xiongwilee.github.io.git
+  branch: master
