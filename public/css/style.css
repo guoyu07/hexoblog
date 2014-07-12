@@ -542,6 +542,9 @@ article footer .tags {
 #pagination .next .fa {
   margin-left: 5px;
 }
+#content {
+  background: #fff;
+}
 #cover {
   height: 250px;
   margin-top: 42px;
