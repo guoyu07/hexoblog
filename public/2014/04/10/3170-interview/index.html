@@ -32,7 +32,7 @@
 <body>
   <header id="header" class='normal_mode'>
     <nav id="main-nav">
-  <ul class='container'>
+  <ul class='main-nav-ul'>
     
       <li><a href="/">Home</a></li>
     
@@ -41,7 +41,23 @@
       <li><a href="/about">About</a></li>
     
   </ul>
+  <form id="search" class="search" action="http://www.baidu.com/s" method="get">
+  	<input type="text" class="search_text" placeholder="search" autocomplete="off">
+  	<input type="hidden" class="search_hidden" name="wd">
+  	<button type="submit" class="search_btn fa fa-search"></button>
+  </form>
   <div class="clearfix"></div>
+  <script>
+  (function($){
+  	$('#search .search_btn').click(function(){
+  		var formEle = $('#search'),
+  			textEle = $("#search .search_text"),
+  			hiddenEle = $("#search .search_hidden");
+  		hiddenEle.val(textEle.val()+' site:wilee.me');
+  		formEle.submit()
+  	})
+  })(jQuery)
+  </script>
 </nav>
   </header>
   <div id="content" class="container">

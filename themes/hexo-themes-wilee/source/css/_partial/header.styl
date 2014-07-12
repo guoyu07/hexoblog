@@ -16,6 +16,9 @@
     line-height 1
     margin-top 10px
   #main-nav
+    position fixed
+    top 0px
+    height 42px
     border-top 1px solid #DDD
     border-bottom 1px solid #DDD
     font-family font-title
@@ -25,22 +28,46 @@
     width 100%
     z-index:9999
     ul
+      float left
       list-style none
       margin-bottom 0
       z-index:9999
       li
-        display inline-block
-        padding: 3px 0px
-        margin-right 10%
+        float left
         a
+          display block
+          line-height 42px
+          padding: 0px 10px
           color #333
           font-size 16px
           &:hover
             color #258fb8
-
-
-
-
-    
-
-    
+    .search
+      position relative
+      float right
+      padding-right 15px
+      margin-top 3px
+      input
+        outline none
+        padding 5px 12px
+        height 16px
+        width 100px
+        box-sizing content-box;
+        border 1px solid #e6e6e6;
+        border-radius 20px;
+        line-height 16px;
+        transition .3s
+      .search_text:focus
+        border-color #aaaaaa
+        width 160px
+      .search_btn
+        position absolute;
+        top 5px;
+        right 20px;
+        width 24px;
+        height 24px;
+        text-align center;
+        line-height 24px;
+        border none
+        background none
+        outline none

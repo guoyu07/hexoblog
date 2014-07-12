@@ -115,6 +115,9 @@ p {
   margin-top: 10px;
 }
 #header #main-nav {
+  position: fixed;
+  top: 0px;
+  height: 42px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -129,21 +132,63 @@ p {
   z-index: 9999;
 }
 #header #main-nav ul {
+  float: left;
   list-style: none;
   margin-bottom: 0;
   z-index: 9999;
 }
 #header #main-nav ul li {
-  display: inline-block;
-  padding: 3px 0px;
-  margin-right: 10%;
+  float: left;
 }
 #header #main-nav ul li a {
+  display: block;
+  line-height: 42px;
+  padding: 0px 10px;
   color: #333;
   font-size: 16px;
 }
 #header #main-nav ul li a:hover {
   color: #258fb8;
+}
+#header #main-nav .search {
+  position: relative;
+  float: right;
+  padding-right: 15px;
+  margin-top: 3px;
+}
+#header #main-nav .search input {
+  outline: none;
+  padding: 5px 12px;
+  height: 16px;
+  width: 100px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 1px solid #e6e6e6;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  line-height: 16px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+#header #main-nav .search .search_text:focus {
+  border-color: #aaa;
+  width: 160px;
+}
+#header #main-nav .search .search_btn {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  border: none;
+  background: none;
+  outline: none;
 }
 article {
   margin: 20px 0 40px 0;
@@ -498,6 +543,7 @@ article footer .tags {
 }
 #cover {
   height: 250px;
+  margin-top: 42px;
   background: #f9f9f9;
   text-align: center;
   center: fixed;
@@ -591,6 +637,9 @@ article footer .tags {
   font-style: normal;
   line-height: 30px;
   margin: 0;
+}
+#cover .anystretch img {
+  top: 42px;
 }
 .archive-title {
   color: #777;
