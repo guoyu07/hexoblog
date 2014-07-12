@@ -1,0 +1,44 @@
+menu:
+  首页: /
+  文章: /archives
+
+widgets:
+- search
+
+cover:
+  enable: true
+  url: /image/bg_1.jpg
+   
+excerpt_link: 更多
+
+full_format: 'ddd, MMM D YYYY, h:mm:ss a'
+
+addthis:
+  enable: true
+  pubid:
+  facebook:
+  twitter:
+  google: true
+  pinterest:
+
+fancybox: true
+
+google_analytics: 
+rss:
+
+comment_provider: duoshuo
+
+# share
+share: false
+
+# Duoshuo comment
+duoshuo:
+  short_name: xiongwilee
+
+social:
+  github: https://github.com/xiongwilee
+  weibo: http://weibo.com/wileexiong
+  google_plus: 
+
+auto_change:
+  enable: true

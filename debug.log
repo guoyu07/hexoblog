@@ -1,0 +1,108 @@
+date: 2014-07-11 02:09:26.426
+argv: node /usr/local/bin/hexo s
+os: Darwin 13.2.0 darwin x64
+version:
+  hexo: 2.7.1
+  http_parser: 1.0
+  node: 0.10.26
+  v8: 3.14.5.9
+  ares: 1.9.0-DEV
+  uv: 0.10.25
+  zlib: 1.2.3
+  modules: 11
+  openssl: 1.0.1e
+---
+
+[debug] 02:09:25.712 Processed: page.md
+[debug] 02:09:25.713 Processed: draft.md
+[debug] 02:09:25.713 Processed: photo.md
+[debug] 02:09:25.713 Processed: post.md
+[debug] 02:09:25.713 Config file loaded
+[debug] 02:09:25.714 Version info checked successfully
+[debug] 02:09:25.728 Loading database.
+[debug] 02:09:25.766 Plugin loaded successfully: hexo-renderer-ejs
+[debug] 02:09:25.782 Plugin loaded successfully: hexo-renderer-marked
+[debug] 02:09:25.898 Plugin loaded successfully: hexo-renderer-stylus
+[debug] 02:09:25.945 Processed: LICENSE
+[debug] 02:09:25.945 Processed: README.md
+[debug] 02:09:25.974 Processed: source/css/_base/layout.styl
+[debug] 02:09:25.974 Processed: source/css/_base/utils.styl
+[debug] 02:09:25.974 Processed: source/css/_base/variable.styl
+[debug] 02:09:25.974 Processed: source/css/_partial/article.styl
+[debug] 02:09:25.974 Processed: source/css/_partial/archive.styl
+[debug] 02:09:25.974 Processed: source/css/_partial/comment.styl
+[debug] 02:09:25.974 Processed: source/css/_partial/footer.styl
+[debug] 02:09:25.974 Processed: source/css/_partial/header.styl
+[debug] 02:09:25.974 Processed: source/css/_partial/index.styl
+[debug] 02:09:25.974 Processed: source/css/_partial/sidebar.styl
+[debug] 02:09:25.974 Processed: source/css/_partial/syntax.styl
+[debug] 02:09:25.975 Processed: source/logo.png
+[debug] 02:09:25.976 Processed: source/fancybox/blank.gif
+[debug] 02:09:25.976 Processed: source/fancybox/fancybox_loading.gif
+[debug] 02:09:25.977 Processed: source/fancybox/fancybox_loading@2x.gif
+[debug] 02:09:25.977 Processed: source/fancybox/fancybox_overlay.png
+[debug] 02:09:25.977 Processed: source/fancybox/fancybox_sprite.png
+[debug] 02:09:25.978 Processed: source/fancybox/fancybox_sprite@2x.png
+[debug] 02:09:25.978 Processed: source/fancybox/jquery.fancybox.css
+[debug] 02:09:25.979 Processed: source/fancybox/jquery.fancybox.pack.js
+[debug] 02:09:25.979 Processed: source/image/bg_0.jpg
+[debug] 02:09:25.979 Processed: source/image/bg_1.jpg
+[debug] 02:09:25.980 Processed: source/js/bootstrap.min.js
+[debug] 02:09:25.980 Processed: source/js/cover.js
+[debug] 02:09:25.981 Processed: source/js/gallery.js
+[debug] 02:09:25.981 Processed: source/js/jquery.anystretch.min.js
+[debug] 02:09:25.982 Processed: source/js/jquery.imagesloaded.min.js
+[debug] 02:09:25.983 Processed: source/css/style.styl
+[debug] 02:09:25.999 Processed: layout/about.ejs
+[debug] 02:09:25.999 Processed: layout/archive.ejs
+[debug] 02:09:25.999 Processed: layout/blog.ejs
+[debug] 02:09:25.999 Processed: layout/category.ejs
+[debug] 02:09:25.999 Processed: layout/index.ejs
+[debug] 02:09:25.999 Processed: layout/layout.ejs
+[debug] 02:09:25.999 Processed: layout/page.ejs
+[debug] 02:09:25.999 Processed: layout/post.ejs
+[debug] 02:09:25.999 Processed: layout/tag.ejs
+[debug] 02:09:25.999 Processed: layout/_widget/category.ejs
+[debug] 02:09:25.999 Processed: layout/_widget/recent_posts.ejs
+[debug] 02:09:25.999 Processed: layout/_widget/search.ejs
+[debug] 02:09:26.000 Processed: layout/_widget/tag.ejs
+[debug] 02:09:26.000 Processed: layout/_widget/tagcloud.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/about.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/after_footer.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/archive.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/article.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/comment.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/duoshuo_comment.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/footer.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/google_analytics.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/head.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/header.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/pagination.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/sidebar.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/social.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/post/category.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/post/gallery.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/post/share.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/post/tag.ejs
+[debug] 02:09:26.000 Processed: layout/_partial/post/title.ejs
+[debug] 02:09:26.012 Theme config loaded
+[debug] 02:09:26.012 Processed: _config.yml
+[debug] 02:09:26.013 Processed: languages/de.yml
+[debug] 02:09:26.014 Processed: languages/default.yml
+[debug] 02:09:26.014 Processed: languages/es.yml
+[debug] 02:09:26.014 Processed: languages/zh-CN.yml
+[debug] 02:09:26.015 Processed: languages/zh-TW.yml
+[error] 02:09:26.389 HexoError: Process failed: _posts/3163-twitter.md
+Error: Reserved keyword "if" attempted to be used as a variable on line 6 in file /Users/xiongweilie/projects/blog/blog/source/_posts/3163-twitter.md.
+    at Object.exports.throwError (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/utils.js:183:9)
+    at Object.TokenParser.parseVar (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:374:13)
+    at Object.TokenParser.parseToken (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:286:12)
+    at /usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:86:12
+    at Object.exports.each (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/utils.js:45:11)
+    at Object.TokenParser.parse (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:76:11)
+    at parseVariable (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:486:18)
+    at /usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:633:15
+    at Object.exports.each (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/utils.js:45:11)
+    at Object.exports.parse (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/parser.js:622:9)
+
+[debug] 02:09:26.426 Cache saved

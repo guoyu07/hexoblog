@@ -1,0 +1,95 @@
+[[32minfo[39m] Hexo is running at [4mhttp://localhost:4000/[24m. Press Ctrl+C to stop.
+[[33mupdate[39m] /Users/xiongweilie/projects/blog/blog/source/_posts/test.md
+[[31merror[39m] HexoError: Process failed: _posts/test.md
+[90mSyntaxError: Invalid regular expression: missing /
+    at Object.Function (<anonymous>)
+    at precompile (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:489:11)
+    at compile (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:584:16)
+    at Object.render (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:513:17)
+    at /usr/local/lib/node_modules/hexo/lib/post/render.js:61:29
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:610:21
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:249:17
+    at iterate (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:149:13)
+    at async.eachSeries (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:165:9)
+    at _asyncMap (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:248:13)[39m
+
+[[31mdelete[39m] /Users/xiongweilie/projects/blog/blog/source/_posts/test.md
+[[32mcreate[39m] /Users/xiongweilie/projects/blog/blog/source/_posts/GIT入门.md
+[[31merror[39m] HexoError: Process failed: _posts/GIT入门.md
+[90mSyntaxError: Invalid regular expression: missing /
+    at Object.Function (<anonymous>)
+    at precompile (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:489:11)
+    at compile (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:584:16)
+    at Object.render (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:513:17)
+    at /usr/local/lib/node_modules/hexo/lib/post/render.js:61:29
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:610:21
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:249:17
+    at iterate (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:149:13)
+    at async.eachSeries (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:165:9)
+    at _asyncMap (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:248:13)[39m
+
+[[33mupdate[39m] /Users/xiongweilie/projects/blog/blog/themes/landscape/layout/_partial/head.ejs
+[[33mupdate[39m] /Users/xiongweilie/projects/blog/blog/themes/landscape/layout/_partial/after-footer.ejs
+[[33mupdate[39m] /Users/xiongweilie/projects/blog/blog/themes/landscape/layout/_partial/after-footer.ejs
+[[31mdelete[39m] /Users/xiongweilie/projects/blog/blog/source/_posts/GIT入门.md
+[[32mcreate[39m] /Users/xiongweilie/projects/blog/blog/source/_posts/git.md
+[[31merror[39m] HexoError: Process failed: _posts/git.md
+[90mSyntaxError: Invalid regular expression: missing /
+    at Object.Function (<anonymous>)
+    at precompile (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:489:11)
+    at compile (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:584:16)
+    at Object.render (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:513:17)
+    at /usr/local/lib/node_modules/hexo/lib/post/render.js:61:29
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:610:21
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:249:17
+    at iterate (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:149:13)
+    at async.eachSeries (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:165:9)
+    at _asyncMap (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:248:13)[39m
+
+[[31mdelete[39m] /Users/xiongweilie/projects/blog/blog/source/_posts/git.md
+[[32mcreate[39m] /Users/xiongweilie/projects/blog/blog/source/_posts/git.md
+[[31merror[39m] HexoError: Process failed: _posts/git.md
+[90mSyntaxError: Invalid regular expression: missing /
+    at Object.Function (<anonymous>)
+    at precompile (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:489:11)
+    at compile (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:584:16)
+    at Object.render (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:513:17)
+    at /usr/local/lib/node_modules/hexo/lib/post/render.js:61:29
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:610:21
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:249:17
+    at iterate (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:149:13)
+    at async.eachSeries (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:165:9)
+    at _asyncMap (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:248:13)[39m
+
+[[33mupdate[39m] /Users/xiongweilie/projects/blog/blog/source/_posts/git.md
+[[31merror[39m] HexoError: Process failed: _posts/git.md
+[90mSyntaxError: Invalid regular expression: missing /
+    at Object.Function (<anonymous>)
+    at precompile (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:489:11)
+    at compile (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:584:16)
+    at Object.render (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:513:17)
+    at /usr/local/lib/node_modules/hexo/lib/post/render.js:61:29
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:610:21
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:249:17
+    at iterate (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:149:13)
+    at async.eachSeries (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:165:9)
+    at _asyncMap (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:248:13)[39m
+
+[[31mdelete[39m] /Users/xiongweilie/projects/blog/blog/source/_posts/git.md
+[[32mcreate[39m] /Users/xiongweilie/projects/blog/blog/source/_posts/hello-git.md
+[[31merror[39m] HexoError: Process failed: _posts/hello-git.md
+[90mSyntaxError: Invalid regular expression: missing /
+    at Object.Function (<anonymous>)
+    at precompile (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:489:11)
+    at compile (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:584:16)
+    at Object.render (/usr/local/lib/node_modules/hexo/node_modules/swig/lib/swig.js:513:17)
+    at /usr/local/lib/node_modules/hexo/lib/post/render.js:61:29
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:610:21
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:249:17
+    at iterate (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:149:13)
+    at async.eachSeries (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:165:9)
+    at _asyncMap (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:248:13)[39m
+
+[[33mupdate[39m] /Users/xiongweilie/projects/blog/blog/source/_posts/hello-git.md
+[[33mupdate[39m] /Users/xiongweilie/projects/blog/blog/source/_posts/hello-git.md
+[[32mcreate[39m] /Users/xiongweilie/projects/blog/blog/source/_posts/test.md
