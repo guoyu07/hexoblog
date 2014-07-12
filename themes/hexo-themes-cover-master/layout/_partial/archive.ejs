@@ -13,8 +13,9 @@ if (page.archive){
     <div class="archive">
 	<article class="<%= item.layout%>"
 		<header>
-		  <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
 		  <h1 class="title"><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h1>
+		  <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+		  <div class="collection">
 		  <% if (!page.category) { 
 		  	if (item.categories && item.categories.length){
 			  var cats = [];
@@ -22,10 +23,10 @@ if (page.archive){
 			    cats.push('<a href="' + config.root + cat.path + '">' + cat.name + '</a>');
 			  });
 			  %>
-			  <div class="categories">
+			  <span class="categories">
 			  	<i class="fa fa-folder-open"></i>
 			    <%- cats.join(', ') %>
-			  </div>
+			  </span>
 			<% } 
 		  } 
 		  if (!page.tag) {
@@ -35,12 +36,13 @@ if (page.archive){
 			    tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
 			  });
 			  %>
-			  <div class="tags">
+			  <span class="tags">
 			  	<i class="fa fa-tag"></i>
 			    <%- tags.join(', ') %>
-			  </div>
+			  </span>
 			<% } 
 		  } %>
+		  </div>
 
 
 		</header>

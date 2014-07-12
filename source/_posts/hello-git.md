@@ -1,6 +1,7 @@
 title: GIT入门
 date: 2014-07-05 10:24:28
-tags:
+tags: GIT,Github
+category: 技术
 ---
 
 git和svn不同的地方有一个索引的概念，需要把修改点提交到索引，之后在提交索引到仓库。

@@ -1,6 +1,7 @@
 title: 五年，祭念
 date: 2014-07-05 10:24:28
 tags: life
+category: life
 ---
 
 五年，百年的二十分之一；不长，也不短。

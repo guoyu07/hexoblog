@@ -80,6 +80,7 @@ p {
 .tags {
   position: relative;
   margin-bottom: 5px;
+  margin-right: 10px;
 }
 .categories a,
 .tags a,
@@ -257,6 +258,10 @@ article header .icon:before {
   left: 0;
   width: 32px;
   text-align: center;
+}
+article header .collection .categories,
+article header .collection .tags {
+  display: inline-block;
 }
 article header time {
   position: absolute;
@@ -454,6 +459,7 @@ article footer .categories,
 article footer .tags {
   position: relative;
   margin: 5px 0;
+  margin-right: 10px;
 }
 .more-link .fa {
   margin-right: 5px;
@@ -600,8 +606,18 @@ article footer .tags {
   margin-bottom: 50px;
 }
 .archive article {
+  position: relative;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.archive article h1 {
+  margin: 0px;
+  line-height: 80px;
+}
+.archive article time {
+  position: absolute;
+  top: 30px;
+  right: 0px;
 }
 .archive article .post-content {
   margin-bottom: 0;
