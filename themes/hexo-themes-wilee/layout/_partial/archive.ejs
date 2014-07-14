@@ -43,9 +43,13 @@ if (page.archive){
 			<% } 
 		  } %>
 		  </div>
-
-
 		</header>
+		
+		<div class="entry">
+	      <% if (item.excerpt){ %>
+	        <%- item.excerpt %>
+	      <% } %>
+	    </div>
 	</article>
     </div>
 <% }); %>

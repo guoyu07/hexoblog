@@ -435,6 +435,9 @@ article .entry video {
   max-width: 100%;
   height: auto;
   border: none;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  max-height: 600px;
 }
 article .entry iframe {
   border: none;
@@ -544,6 +547,7 @@ article footer .tags {
 }
 #content {
   background: #fff;
+  margin-top: 42px;
 }
 #cover {
   height: 250px;

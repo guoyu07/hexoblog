@@ -25,6 +25,7 @@ addthis:
 fancybox: true
 
 google_analytics: 
+baidu_tongji: true
 rss:
 
 comment_provider: duoshuo

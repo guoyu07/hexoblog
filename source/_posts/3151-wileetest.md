@@ -1,5 +1,5 @@
 title: WEB标准列表
-date: 2014-07-05 10:24:28
+date: 2013-07-05 10:24:28
 tags: fe, web
 Sources:
   example: http://node-blog.semu.mp
