@@ -177,7 +177,7 @@ p {
 }
 #header #main-nav .search .search_text:focus {
   border-color: #aaa;
-  width: 160px;
+  width: 120px;
 }
 #header #main-nav .search .search_btn {
   position: absolute;
