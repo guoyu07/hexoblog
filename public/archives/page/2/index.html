@@ -23,9 +23,10 @@
   <link rel="stylesheet" href="/bootstrap/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="/fontawesome/css/font-awesome.css" type="text/css">
 <link rel="stylesheet" href="/css/style.css" type="text/css">
-  <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
   <script src="//apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="/js/html5.js"></script><![endif]-->
+  <script src="/responsivenav/responsive-nav.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/responsivenav/responsive-nav.css" type="text/css">
   
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
@@ -36,39 +37,62 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 
 <body>
   <header id="header" class='normal_mode'>
-    <nav id="main-nav">
-  <ul class='main-nav-ul'>
-    
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-      <li><a href="/about">About</a></li>
-    
-  </ul>
+    <div id="top">
+  <nav id="nav">
+    <ul class='main-nav-ul'>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+    </ul>
+  </nav>
   <form id="search" class="search" action="http://www.baidu.com/s" method="get">
   	<input type="text" class="search_text" placeholder="search" autocomplete="off">
   	<input type="hidden" class="search_hidden" name="wd">
   	<button type="submit" class="search_btn fa fa-search"></button>
   </form>
-  <div class="clearfix"></div>
-  <script>
-  (function($){
-  	$('#search .search_btn').click(function(){
-  		var formEle = $('#search'),
-  			textEle = $("#search .search_text"),
-  			hiddenEle = $("#search .search_hidden");
-  		hiddenEle.val(textEle.val()+' site:wilee.me');
-  		formEle.submit()
-  	})
-  })(jQuery)
-  </script>
-</nav>
+</div>
+<script>
+(function($){
+  $('#search .search_btn').click(function(){
+    var formEle = $('#search'),
+      textEle = $("#search .search_text"),
+      hiddenEle = $("#search .search_hidden");
+    hiddenEle.val(textEle.val()+' site:wilee.me');
+    formEle.submit()
+  })
+  var currentNav = responsiveNav('#nav');
+})(jQuery)
+</script>
   </header>
   <div id="content" class="container">
     
 <h2 class="archive-title"><i class="fa fa-archive"></i>归档</h2>
 
+
+    <div class="archive">
+	<article class="post"
+		<header>
+		  <h1 class="title"><a href="/2014/03/20/3167-javascript/">javascript 第三方API开发经验</a></h1>
+		  <time datetime="2014-03-20T10:18:28.000Z"><a href="/2014/03/20/3167-javascript/">3月 20 2014</a></time>
+		  <div class="collection">
+		  
+			  <span class="tags">
+			  	<i class="fa fa-tag"></i>
+			    <a href="/tags/Example/">Example</a>
+			  </span>
+			
+		  </div>
+		</header>
+		
+		<div class="entry">
+	      
+	    </div>
+	</article>
+    </div>
 
     <div class="archive">
 	<article class="post"
@@ -235,7 +259,6 @@ Powered by <a href="http://zespia.tw/hexo/" title="Hexo" target="_blank" rel="ex
 
 
 
-    
     <script type="text/javascript">
       var duoshuoQuery = {short_name:"xiongwilee"};
     (function() {
@@ -248,14 +271,6 @@ Powered by <a href="http://zespia.tw/hexo/" title="Hexo" target="_blank" rel="ex
     })();
   </script>
 
-
-
-<script type="text/javascript">
-  
-  $(function(){
-  });
-
-</script>
 
 
 </body>

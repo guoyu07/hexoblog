@@ -1,24 +1,26 @@
-<nav id="main-nav">
-  <ul class='main-nav-ul'>
-    <% for (var i in theme.menu){ %>
-      <li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
-    <% } %>
-  </ul>
+<div id="top">
+  <nav id="nav">
+    <ul class='main-nav-ul'>
+      <% for (var i in theme.menu){ %>
+        <li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
+      <% } %>
+    </ul>
+  </nav>
   <form id="search" class="search" action="http://www.baidu.com/s" method="get">
   	<input type="text" class="search_text" placeholder="search" autocomplete="off">
   	<input type="hidden" class="search_hidden" name="wd">
   	<button type="submit" class="search_btn fa fa-search"></button>
   </form>
-  <div class="clearfix"></div>
-  <script>
-  (function($){
-  	$('#search .search_btn').click(function(){
-  		var formEle = $('#search'),
-  			textEle = $("#search .search_text"),
-  			hiddenEle = $("#search .search_hidden");
-  		hiddenEle.val(textEle.val()+' site:wilee.me');
-  		formEle.submit()
-  	})
-  })(jQuery)
-  </script>
-</nav>
+</div>
+<script>
+(function($){
+  $('#search .search_btn').click(function(){
+    var formEle = $('#search'),
+      textEle = $("#search .search_text"),
+      hiddenEle = $("#search .search_hidden");
+    hiddenEle.val(textEle.val()+' site:wilee.me');
+    formEle.submit()
+  })
+  var currentNav = responsiveNav('#nav');
+})(jQuery)
+</script>
