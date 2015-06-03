@@ -954,7 +954,7 @@ git branch mybranch
       
       
   
-    <h1 class="title"><a href="/2014/04/10/3173-javascript/">javascript中element等于string的坑</a></h1>
+    <h1 class="title"><a href="/2014/04/10/3171-demo/">input绑定keyup or keydown事件发送延时请求</a></h1>
   
 
 <div class="collection">
@@ -967,7 +967,7 @@ git branch mybranch
   </div>
 
 </div>
-<time datetime="2014-04-10T11:14:16.000Z"><a href="/2014/04/10/3173-javascript/">2014-04-10 07:14</a></time>
+<time datetime="2014-04-10T11:14:16.000Z"><a href="/2014/04/10/3171-demo/">2014-04-10 07:14</a></time>
 <div class="clear"></div>
       
     </header>
@@ -986,39 +986,53 @@ git branch mybranch
     
     <div class="entry">
       
-        <p>JS编码中有一个方法的形参需要判断类型：</p>
-<pre><code><span class="keyword">var</span> test = <span class="function"><span class="keyword">function</span><span class="params">(ele)</span>{</span>
-    <span class="keyword">if</span>((<span class="keyword">typeof</span> ele).toLowerCase() == <span class="string">'string'</span> || ele==<span class="string">''</span>){
-        <span class="comment">//do something here</span>
-    }<span class="keyword">else</span>{
-    }
-}
-</code></pre><p>正常情况下在传递一个element作为形参去执行这个方法程序应该走到else的分支中去；但是断点发现，一个<a href="" id="test"></a>的节点作为形参却走到了if中的代码，断电发现：</p>
-<pre><code>ele==<span class="string">''</span>
-</code></pre><p>竟然为true , console打出来的参数确实是一个element，typeof出来也是object。经大神提示：</p>
-<pre><code><span class="keyword">var</span> a = document.createElement(<span class="string">'div'</span>);
-a.toString = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
-    <span class="keyword">return</span> <span class="string">'test'</span>
-};
-a==<span class="string">'test'</span><span class="comment">//true</span>
-</code></pre><p>但是，这个<a href="" id="test"></a>并没有重写toString方法。为何会toString会返回””呢。</p>
-<pre><code><span class="reserved">var</span> b = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);
-b.href=<span class="string">'http://www.baidu.com'</span>;
-b.toString() == <span class="string">'http://www.baidu.com/'</span>;<span class="regexp">//</span><span class="literal">true</span>
-</code></pre><p>这下全都明白了。</p>
+        <p>input框输入的时候如果需要异步请求资源做autosuggest功能或者其他情况的话就需要绑定keyup/keydown/keypress事件，在键入的过程中根据用户输入的内容通过异步接口获取对应suggest信息，例如：</p>
+<pre><code><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">id</span>=<span class="value">"inputTimerTest"</span> <span class="attribute">placeholder</span>=<span class="value">"inputTimer测试"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+(<span class="function"><span class="keyword">function</span><span class="params">($)</span>{</span>
+    $(<span class="string">'inputTimerTest'</span>).on(<span class="string">'keyup'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+        $.get(<span class="string">'/path'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+            <span class="comment">//do something here</span>
+        })
+    })
+})(jQuery)
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><p>但是如果用户量过大，或者键入信息过多由于各种情况（尤其是中文输入法），只要触发一次keyup/keydown/keypress事件就会发送一次请求。对服务器的压力是相当大的，对正在快速键入的用户来说也没有任何体验上的好处。</p>
+<p>如何在一定的键入时间内，如果用户正在连续接入就不用再去发送请求，对比了几个实现方案，发现一个简单的思路：<strong> 在一连串的键入事件中，只要取消上一次的键入延时程序即可 </strong>，根据这个思路对上面的代码做一下改动：</p>
+<pre><code><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">id</span>=<span class="value">"inputTimerTest"</span> <span class="attribute">placeholder</span>=<span class="value">"inputTimer测试"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+(<span class="function"><span class="keyword">function</span><span class="params">($)</span>{</span>
+    <span class="keyword">var</span> timer,
+        delayTime = <span class="number">300</span>;<span class="comment">//可感知的延时，300ms以下最合适</span>
+
+    $(<span class="string">'inputTimerTest'</span>).on(<span class="string">'keyup'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+
+        clearTimeout(timer);<span class="comment">//取消上一次的操作延时</span>
+
+        timer = setTimeout(<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span><span class="comment">//定义本次键入操作的延时</span>
+            $.get(<span class="string">'/path'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+                <span class="comment">//do something here</span>
+            })
+        },delayTime)
+
+    })
+})(jQuery)
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><p>这样只需要去操作延时程序即可实现，思路很简单，实现代码也很容易；唯一的缺憾是产生了一个timer的变量在绑定方法的作用域外，但无关紧要。</p>
+<p>这里是DEMO<a href="/demo/inputTimer.html">/demo/inputTimer.html</a></p>
 
       
     </div>
     <footer>
       
         <div class="alignleft">
-            <a href="/2014/04/10/3173-javascript/#more" class="more-link"><i class="fa fa-chevron-right"></i>更多</a>
+            <a href="/2014/04/10/3171-demo/#more" class="more-link"><i class="fa fa-chevron-right"></i>更多</a>
         </div>
         
         
           <div class="alignright"> 
-            <a href="http://wilee.me/2014/04/10/3173-javascript/#comment" class="comment-link">
-              <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key="/2014/04/10/3173-javascript/">&nbsp;
+            <a href="http://wilee.me/2014/04/10/3171-demo/#comment" class="comment-link">
+              <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key="/2014/04/10/3171-demo/">&nbsp;
               </span>
             </a>
           </div>
