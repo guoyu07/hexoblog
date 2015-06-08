@@ -1,5 +1,5 @@
 title: javascript中element等于string的坑
-date: 2014-04-10 19:14:16
+date: 2012-11-5 19:14:16
 tags: Example
 ---
 

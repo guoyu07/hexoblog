@@ -63,7 +63,8 @@ p {
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 960px;
+    width: 100%;
+    padding: 0 100px;
   }
 }
 .jiathis_style * {
@@ -118,7 +119,6 @@ p {
   position: fixed;
   top: 0px;
   height: 42px;
-  border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 2.5em;
@@ -127,7 +127,7 @@ p {
   -o-transition: 0.3s;
   -ms-transition: 0.3s;
   transition: 0.3s;
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.8);
   width: 100%;
   z-index: 9999;
 }
@@ -183,7 +183,6 @@ p {
   -webkit-appearance: none;
 }
 #header #top #search .search_text:focus {
-  border-color: #aaa;
   background: #fff;
   width: 160px;
 }
@@ -320,7 +319,7 @@ article header .collection .tags {
 article header time {
   position: absolute;
   right: 0;
-  top: 34px;
+  top: 45px;
   color: #777;
   font: 0.9em "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   margin-bottom: 5px;
@@ -329,8 +328,8 @@ article header time {
 }
 article header .title {
   font-weight: normal;
-  font-size: 35px;
-  line-height: 80px;
+  font-size: 20px;
+  line-height: 40px;
   margin: 0px;
   color: #258fb8;
 }
@@ -447,6 +446,15 @@ article .entry video {
   border-radius: 3px;
   max-height: 600px;
 }
+article .entry a.fancybox {
+  display: block;
+  margin-left: -2em;
+  overflow: hidden;
+  text-align: center;
+}
+article .entry div.caption {
+  text-align: center;
+}
 article .entry iframe {
   border: none;
 }
@@ -554,6 +562,7 @@ article footer .tags {
   margin-left: 5px;
 }
 #content {
+  position: relative;
   background: #fff;
   margin-top: 42px;
 }
@@ -571,6 +580,7 @@ article footer .tags {
   background-size: cover;
 }
 #cover #profile {
+  position: relative;
   padding-top: 60px;
 }
 #cover #profile a {
@@ -784,10 +794,10 @@ article footer .tags {
   display: inline-block;
 }
 #footer {
-  color: #777;
+  color: rgba(255,255,255,0.9);
   margin-bottom: 50px;
   font: 0.9em/1.6 "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
-  text-shadow: 0 0 1px #fff;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
   margin-top: 10px;
   text-align: center;
 }

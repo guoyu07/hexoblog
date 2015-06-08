@@ -1,5 +1,5 @@
 title: 'stop and thinking'
-date: 2014-07-13 22:54:15
+date: 2013-06-13 22:54:15
 tags:
 ---
 * ** 从选择说起 **
