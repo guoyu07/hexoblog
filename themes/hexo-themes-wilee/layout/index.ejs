@@ -1,5 +1,5 @@
 <div id="cover">
-	<div id="profile" alt="<% if (theme.cover.enable) { %><%= theme.cover.url%><% } %>">
+	<div id="profile" alt="<% if (theme.cover.enable) { %><%= theme.cover.url%><% } %>" data-0="top:0px;opacity:1;" data-1000="top:600px;opacity:.2;">
 		<div href="<%-config.root%>" id="title" class="title">
 			<a class="title_link"><%-config.title%><i>ME</i></a>
 		</div>
@@ -19,4 +19,7 @@
 
 <%- partial('_partial/pagination', {article: false}) %>
 
-<%- js(['js/jquery.anystretch.min.js', 'js/cover.js']) %>
+<%- js(['js/jquery.anystretch.min.js', 'js/cover.js','js/skrollr.min.js']) %>
+<script type="text/javascript">
+var Skrollr = skrollr.init();//视差滚动
+</script>
