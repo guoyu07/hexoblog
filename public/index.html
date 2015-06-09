@@ -67,7 +67,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
   </header>
   <div id="content" class="container" data-0="box-shadow:0px 0px 100px rgba(0,0,0,.5)" data-800="box-shadow:0px 0px 1000px rgba(0,0,0,1)">
     <div id="cover">
-	<div id="profile" alt="/image/bg_1.jpg" data-0="top:0px;opacity:1;" data-1000="top:400px;opacity:.2;">
+	<div id="profile" alt="/image/bg_1.jpg">
 		<div href="/" id="title" class="title">
 			<a class="title_link">Wilee<i>ME</i></a>
 		</div>
@@ -77,7 +77,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 				<span class="subtitle_content">知而获智，智达高远</span>
 			</div>
 		
-		<div class="socials" data-0="margin-top:80px;" data-1000="margin-top:-40px;">
+		<div id="socials" class="socials">
   <ul class="my-socials">
     
     <li>
@@ -111,7 +111,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
       
       
   
-    <h1 class="title"><a href="/2015/06/09/slider-test/">slider-test</a></h1>
+    <h1 class="title"><a href="/2015/06/09/slider-test/">我所理解的登录</a></h1>
   
 
 <div class="collection">
@@ -1434,7 +1434,12 @@ git branch mybranch
 <script type="text/javascript">
 	if(window.ontouchstart === undefined){
 		//视差滚动仅仅用在PC端
-		var Skrollr = skrollr.init();//视差滚动	
+		setTimeout(function(){
+			$('#profile').attr({"data-0":"top:0px;opacity:1;","data-1000":"top:500px;opacity:.2;"});//logo
+			$('#socials').attr({"data-0":"margin-top:80px;","data-1000":"margin-top:-40px;"});//社交logo
+			$('.anystretch img').attr({'data-0':'margin-top:0px','data-1000':'margin-top:150px','data-1001':'margin-top:0px'});//大bnner
+			var Skrollr = skrollr.init();//视差滚动
+		},100)
 	}
 </script>
 
