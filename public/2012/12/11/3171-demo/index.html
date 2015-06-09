@@ -90,7 +90,8 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
       
     </header>
     
-      <div class="gallery">
+      
+        <div class="gallery">
   <div class="photoset">
     
       <img src="">
@@ -101,10 +102,10 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
     <div class="next"><i class="fa fa-chevron-right"></i></div>
   </div>
 </div>
-    
-    <div class="entry">
       
-        <p>input框输入的时候如果需要异步请求资源做autosuggest功能或者其他情况的话就需要绑定keyup/keydown/keypress事件，在键入的过程中根据用户输入的内容通过异步接口获取对应suggest信息，例如：</p>
+      <div class="entry">
+        
+          <p>input框输入的时候如果需要异步请求资源做autosuggest功能或者其他情况的话就需要绑定keyup/keydown/keypress事件，在键入的过程中根据用户输入的内容通过异步接口获取对应suggest信息，例如：</p>
 <pre><code><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">id</span>=<span class="value">"inputTimerTest"</span> <span class="attribute">placeholder</span>=<span class="value">"inputTimer测试"</span>&gt;</span>
 <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
 (<span class="function"><span class="keyword">function</span><span class="params">($)</span>{</span>
@@ -139,8 +140,9 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 </code></pre><p>这样只需要去操作延时程序即可实现，思路很简单，实现代码也很容易；唯一的缺憾是产生了一个timer的变量在绑定方法的作用域外，但无关紧要。</p>
 <p>这里是DEMO<a href="/demo/inputTimer.html">/demo/inputTimer.html</a></p>
 
-      
-    </div>
+        
+      </div>
+    
     <footer>
       
         
