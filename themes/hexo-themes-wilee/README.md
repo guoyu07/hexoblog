@@ -1,27 +1,24 @@
 # Cover
 
-A chic Hexo theme with facebook-like cover photo. Forked from [Writing](https://github.com/yunlzheng/hexo-themes-writing).
+一套兼容简化的hexo主题，Forked form https://github.com/daisygao/hexo-themes-cover
 
 ## Demo
 
-[demo site](http://daisygao.com)
+[demo site](http://wilee.me)
 
 Index page - cover, with social site links integrated:
-![](http://ww2.sinaimg.cn/large/6cea169fjw1edhzrl42srj21400jnk2r.jpg)
+![](http://ww4.sinaimg.cn/large/7171171cjw1esyea652lkj20zk0hrte1.jpg)
 
 Index page - blog:
-![](http://ww1.sinaimg.cn/large/6cea169fjw1edhzsngsyjj213l0jmtbu.jpg)
+![](http://ww3.sinaimg.cn/large/7171171cjw1esyea51xe4j20zk0hr78f.jpg)
 
-Post page, with pagination, share module and comment module integrated:
-![](http://ww1.sinaimg.cn/large/6cea169fjw1edhzude2koj21400jn40v.jpg)
+Post page - slider:
+![](http://ww1.sinaimg.cn/large/7171171cjw1esyebfjunuj20zk0hqtay.jpg)
 
 ## Features
-  - Dynamically-resized facebook-like cover photo displayed on index page, backed by [Anystretch](https://github.com/danmillar/jquery-anystretch).  
-  - Mobile-optimized by using Twitter bootstrap.
-  - Dynamically-fixed nav-bar design.
-  - Beautiful profile design with logo, social site links.
-  - Duoshuo comment widget and Jiathis share widget integrated (CSS-hack involved!), friendly for Chinese users.
-  - Newer and older posts pagination support.
+  - 集成了eveal.js，md即讲稿
+  - 集成了skrollr，视差滚动
+  - 响应式
 
 ## Install
 
