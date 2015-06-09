@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+
   
   <title>一个简单的异步上传组件 | Wilee</title>
   <meta name="author" content="xiongwilee">
@@ -27,6 +28,7 @@
   <script src="//apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <!--[if lt IE 9]><script src="/js/html5.js"></script><![endif]-->
   
+
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3460af47268846ca3d274b44b6aeb8ce' type='text/javascript'%3E%3C/script%3E"));
@@ -35,6 +37,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 </head>
 
 <body>
+
   <header id="header" class='normal_mode'>
     <div id="top">
   <nav id="nav">
@@ -65,8 +68,12 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 })(jQuery)
 </script>
   </header>
+
+
   <div id="content" class="container" data-0="box-shadow:0px 0px 100px rgba(0,0,0,.5)" data-800="box-shadow:0px 0px 1000px rgba(0,0,0,1)">
-    <article class="post">
+
+    
+<article class="post">
   <div class="post-content">
     <header>
       
@@ -90,8 +97,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
       
     </header>
     
-      
-        <div class="gallery">
+      <div class="gallery">
   <div class="photoset">
     
       <img src="">
@@ -102,10 +108,10 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
     <div class="next"><i class="fa fa-chevron-right"></i></div>
   </div>
 </div>
+    
+    <div class="entry">
       
-      <div class="entry">
-        
-          <p>工作需要，要写一个简单的文件异步上传功能，首先想到的是jquery的ajaxUpload组件，但是公司用的是tangram，为了这样的一个功能再去引一个jquery实在太亏了;问了一圈同事好像都没有提供这个功能的“库存”，只好自己写了。</p>
+        <p>工作需要，要写一个简单的文件异步上传功能，首先想到的是jquery的ajaxUpload组件，但是公司用的是tangram，为了这样的一个功能再去引一个jquery实在太亏了;问了一圈同事好像都没有提供这个功能的“库存”，只好自己写了。</p>
 <p>查了一些资料，实现单文件异步提交还是很简单的。大致思路是<strong> 生成一个form表单，target到iframe中去，由后端进行处理，然后再把上传结果信息以html 里的JS全局变量形式返回到iframe，外层实时监听iframe里的JS全局变量即可 </strong>。（看起来像是发起跨域异步请求的方法，但事实上这是不支持跨域的）</p>
 <p>还有一点需要注意的是，<strong> 如果需要修改提交表单的样式，最佳方案是隐藏当前表单 </strong>（这里是指：opacity: 0;或 filter:progid:DXImageTransform.Microsoft.Alpha(opacity:0);），然后在下面加上按钮背景。</p>
 <p>JS代码如下：</p>
@@ -301,9 +307,8 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
     <span class="tag">&lt;/<span class="title">body</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">html</span>&gt;</span>
 </code></pre>
-        
-      </div>
-    
+      
+    </div>
     <footer>
       
         
@@ -333,6 +338,8 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 <!-- Duoshuo Comment END -->
   
 </section>
+
+
 
 
 
@@ -379,6 +386,7 @@ Powered by <a href="http://zespia.tw/hexo/" title="Hexo" target="_blank" rel="ex
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
+
 
 
 </body>

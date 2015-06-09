@@ -1,1 +1,5 @@
+<%if(page.type=="slider"){%>
+<%- partial('_partial/slider', {item: page, index: false}) %>
+<%}else{%>
 <%- partial('_partial/article', {item: page, index: false}) %>
+<%}%>

@@ -578,6 +578,20 @@ article footer .tags {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+/*.plane_wrapper
+    position absolute
+    bottom 100px
+    left 100px
+    -webkit-transition top .5s
+    -moz-perspective 201px
+    -webkit-perspective 201px
+    perspective 201px
+    .plane
+      width 100px
+      -moz-box-sizing border-box;
+      -webkit-box-sizing border-box
+      box-sizing border-box
+      -webkit-transform translateX(-200px) translateY(0px) translateZ(0px)*/
 }
 #cover #profile {
   position: relative;

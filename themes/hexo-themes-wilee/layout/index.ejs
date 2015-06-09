@@ -11,6 +11,9 @@
 		<% } %>
 		<%- partial('_partial/social') %>
 	</div>
+	<!--<div id="plane_wrapper" class="plane_wrapper">
+		<img class="plane" src="/image/plane.png" data-0="-webkit-transform:translateX(-200px) translateY(0px) translateZ(0px)" data-1000="-webkit-transform:translateX(1000px) translateY(-100px) translateZ(600px)" />
+	</div>-->
 </div>
 
 <% page.posts.each(function(item){ %>
@@ -28,6 +31,6 @@
 			$('#socials').attr({"data-0":"margin-top:80px;","data-1000":"margin-top:-30px;"});//社交logo
 			$('.anystretch img').attr({'data-0':'margin-top:0px','data-1000':'margin-top:150px','data-1001':'margin-top:0px'});//大bnner
 			var Skrollr = skrollr.init();//视差滚动
-		},100)
+		},300)
 	}
 </script>

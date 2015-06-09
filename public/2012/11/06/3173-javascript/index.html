@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+
   
   <title>javascript中element等于string的坑 | Wilee</title>
   <meta name="author" content="xiongwilee">
@@ -27,6 +28,7 @@
   <script src="//apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <!--[if lt IE 9]><script src="/js/html5.js"></script><![endif]-->
   
+
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3460af47268846ca3d274b44b6aeb8ce' type='text/javascript'%3E%3C/script%3E"));
@@ -35,6 +37,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 </head>
 
 <body>
+
   <header id="header" class='normal_mode'>
     <div id="top">
   <nav id="nav">
@@ -65,8 +68,12 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 })(jQuery)
 </script>
   </header>
+
+
   <div id="content" class="container" data-0="box-shadow:0px 0px 100px rgba(0,0,0,.5)" data-800="box-shadow:0px 0px 1000px rgba(0,0,0,1)">
-    <article class="post">
+
+    
+<article class="post">
   <div class="post-content">
     <header>
       
@@ -90,8 +97,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
       
     </header>
     
-      
-        <div class="gallery">
+      <div class="gallery">
   <div class="photoset">
     
       <img src="">
@@ -102,10 +108,10 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
     <div class="next"><i class="fa fa-chevron-right"></i></div>
   </div>
 </div>
+    
+    <div class="entry">
       
-      <div class="entry">
-        
-          <p>JS编码中有一个方法的形参需要判断类型：</p>
+        <p>JS编码中有一个方法的形参需要判断类型：</p>
 <pre><code><span class="keyword">var</span> test = <span class="function"><span class="keyword">function</span><span class="params">(ele)</span>{</span>
     <span class="keyword">if</span>((<span class="keyword">typeof</span> ele).toLowerCase() == <span class="string">'string'</span> || ele==<span class="string">''</span>){
         <span class="comment">//do something here</span>
@@ -126,9 +132,8 @@ b.href=<span class="string">'http://www.baidu.com'</span>;
 b.toString() == <span class="string">'http://www.baidu.com/'</span>;<span class="regexp">//</span><span class="literal">true</span>
 </code></pre><p>这下全都明白了。</p>
 
-        
-      </div>
-    
+      
+    </div>
     <footer>
       
         
@@ -158,6 +163,8 @@ b.toString() == <span class="string">'http://www.baidu.com/'</span>;<span class=
 <!-- Duoshuo Comment END -->
   
 </section>
+
+
 
 
 
@@ -204,6 +211,7 @@ Powered by <a href="http://zespia.tw/hexo/" title="Hexo" target="_blank" rel="ex
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
+
 
 
 </body>

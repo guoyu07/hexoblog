@@ -1,6 +1,6 @@
 title: 我所理解的登录
 date: 2015-06-08 23:32:22
-slider: true
+type: slider
 ---
 # 我所理解的登录（Ⅰ）
 
