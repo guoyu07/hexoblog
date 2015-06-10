@@ -5,14 +5,14 @@
              data-vertical="^\n\n"  
              data-notes="^Note:"  
              data-charset="iso-8859-15">
-      <script type="text/template"><%= item.raw.substr(item.raw.indexOf('---')+4) || '无文档' %></script>
+      <script type="text/template"><%- item.raw.substr(item.raw.indexOf('---')+4) || '无文档' %></script>
     </section>
   </div>
 </div>
 <%- js(['/reveal/lib/head.min.js','/reveal/reveal.js']) %>
 <%- css(['/reveal/style/reveal.css','/reveal/style/theme/moon.css']) %>
 <script type="text/javascript">
-Reveal.initialize({
+  Reveal.initialize({
     controls: true,
     progress: true,
     history: true,
@@ -33,5 +33,5 @@ Reveal.initialize({
         { src: window.location.protocol+'//'+window.location.host+'/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
         { src: window.location.protocol+'//'+window.location.host+'/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
     ]
-});
+  });
 </script>

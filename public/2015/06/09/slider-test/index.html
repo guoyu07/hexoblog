@@ -77,13 +77,13 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 
 #### 用户体验是不是被过度放大了？
 
-&gt; ** 可用性 ** —— 当没钱的时候，穿一身破衣服，能保暖就行，这是基本需求；
+> ** 可用性 ** —— 当没钱的时候，穿一身破衣服，能保暖就行，这是基本需求；
 
-&gt; ** 易用性 ** —— 当有些钱了，就希望穿一身好看衣服，这样能显得整个人更好看，这就是基本体验了；
+> ** 易用性 ** —— 当有些钱了，就希望穿一身好看衣服，这样能显得整个人更好看，这就是基本体验了；
 
-&gt; ** 好用性 ** —— 当有闲钱了，就开始买一些简单的首饰，涂脂抹粉画眼线，这就是增强体验；
+> ** 好用性 ** —— 当有闲钱了，就开始买一些简单的首饰，涂脂抹粉画眼线，这就是增强体验；
 
-&gt; ** 品牌价值 ** —— 当非常有钱了，开始穿金戴银，貂皮大衣，这时候你要彰显的是品位，这就是品牌需求了
+> ** 品牌价值 ** —— 当非常有钱了，开始穿金戴银，貂皮大衣，这时候你要彰显的是品位，这就是品牌需求了
 
 引自：[【知乎】用户体验是不是被过度放大了](http://www.zhihu.com/question/19562401)
 
@@ -111,8 +111,8 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 
 * 使用for属性规定 label 与哪个表单元素绑定。
 ```HTML
-&lt;input type=&quot;checkbox&quot; name=&quot;is_remember&quot; id=&quot;is_remember&quot;/&gt;
-&lt;label for=&quot;is_remember&quot;&gt;是否记住登录状态&lt;/label&gt;
+<input type="checkbox" name="is_remember" id="is_remember"/>
+<label for="is_remember">是否记住登录状态</label>
 ```
     * 扩大热点区域，使操作更方便 
 
@@ -120,11 +120,11 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 
 * placeholder
 ```HTML
-&lt;input type=&quot;text&quot; name=&quot;username&quot; id=&quot;username&quot; placeholder=&quot;用户名/手机号/邮箱&quot;/&gt;
+<input type="text" name="username" id="username" placeholder="用户名/手机号/邮箱"/>
 ```
 ```JavaScript
 _isSupportPlaceholder:function(){
-	return &#39;placeholder&#39; in document.createElement(&#39;input&#39;)
+	return 'placeholder' in document.createElement('input')
 }
 ```
     * 用户在没有任何输入的情况下默认提示文案；
@@ -134,9 +134,9 @@ _isSupportPlaceholder:function(){
 
 * tabindex
 ```HTML
-&lt;input type=&#39;text&#39; name=&quot;username&quot; tabindex=&quot;1&quot;&gt;
-&lt;input type=&#39;text&#39; name=&quot;password&quot; tabindex=&quot;2&quot;&gt;
-&lt;input type=&#39;submit&#39; value=&quot;提交&quot; tabindex=&quot;3&quot;&gt;
+<input type='text' name="username" tabindex="1">
+<input type='text' name="password" tabindex="2">
+<input type='submit' value="提交" tabindex="3">
 ```
 
 
@@ -153,7 +153,7 @@ input:focus{background:#}
 
 * 提交时密码输入有误或为空，清空密码表单值，自动聚焦到密码表单
 ```JavaScript
-ele.value = &quot;&quot;;
+ele.value = "";
 ele.focus();
 ```
     * 减少用户操作成本，代码可以完成的就不需要用户操作
@@ -162,7 +162,7 @@ ele.focus();
 
 * 当前状态提醒，“登录中...”
 ```JavaScript
-ele.value = &quot;登录中&quot;
+ele.value = "登录中"
 ```
     * 异步提交数据期间，用户应该得到反馈；被告知正在发送数据。
 
@@ -172,7 +172,7 @@ ele.value = &quot;登录中&quot;
 ```JavaScript
 setTimeout(function(){
     if(!isLogin){
-        showMsg(&#39;可能是网络原因登录超时，请稍候再试。&#39;)
+        showMsg('可能是网络原因登录超时，请稍候再试。')
     }
 },5000)
 ```
@@ -183,7 +183,7 @@ setTimeout(function(){
 * 大小写锁定提示
 ```JavaScript
 var isShift = e.shiftKey || (keyCode == 16) || false
-if (((keyCode &gt;= 65 &amp;&amp; keyCode &lt;= 90) &amp;&amp; !isShift) || ((keyCode &gt;= 97 &amp;&amp; keyCode &lt;= 122) &amp;&amp; isShift)) {
+if (((keyCode >= 65 && keyCode <= 90) && !isShift) || ((keyCode >= 97 && keyCode <= 122) && isShift)) {
     //do something here
 }
 ```
@@ -224,21 +224,21 @@ if (((keyCode &gt;= 65 &amp;&amp; keyCode &lt;= 90) &amp;&amp; !isShift) || ((ke
 
 ## 下期预告
 
-&gt; 我所理解的登录
+> 我所理解的登录
 
-&gt; ——面对精致的需求如何构建高复用，易维护，高性能的代码
+> ——面对精致的需求如何构建高复用，易维护，高性能的代码
 
-&gt; ### 挑战
+> ### 挑战
 
-&gt; * 服务于70+用户产品线：基础库不一，交互需求不同，客户端不同
-&gt; * 更新迭代：缓存机制
-&gt; * 国际化：多语言支持
-&gt; * 安全：RSA加密，POST/HTTPS,TOKEN
-&gt; * 反作弊：用户行为数据收集
+> * 服务于70+用户产品线：基础库不一，交互需求不同，客户端不同
+> * 更新迭代：缓存机制
+> * 国际化：多语言支持
+> * 安全：RSA加密，POST/HTTPS,TOKEN
+> * 反作弊：用户行为数据收集
 
-&gt; ### 思考
+> ### 思考
 
-&gt; ... 
+> ... 
 
 
 
@@ -287,17 +287,17 @@ http://passport.baidu.com/passApi/html/loginPad_uni.html
 
 ### iframe实现功能页面，产品线嵌套
 
-&gt; 提供给产品线一个页面，使产品线通过iframe嵌套实现登录
+> 提供给产品线一个页面，使产品线通过iframe嵌套实现登录
 
 #### 特征
 
-&gt; 优点
+> 优点
 
 * 实现成本低
 * 每套功能都有一个页面，管理方便
 * 独立的页面实现，安全性更高
 
-&gt; 缺点
+> 缺点
 
 * 产品线订制灵活度不高，UI/callback等无法满足产品线需求
 * 不能抓取到当前页面的信息
@@ -307,17 +307,17 @@ http://passport.baidu.com/passApi/html/loginPad_uni.html
 
 ### 提供JS Api
 
-&gt; 提供JS Api生成DOM实现业务逻辑
+> 提供JS Api生成DOM实现业务逻辑
 
 #### 特征
 
-&gt; 优点
+> 优点
 
 * 产品线订制灵活度高
 * 与当前页面灵活交互
 * 产品线接入成本底
 
-&gt; 缺点
+> 缺点
 
 * 实现成本高
 
@@ -420,7 +420,7 @@ CDN
 <link rel="stylesheet" href="/reveal/style/theme/moon.css" type="text/css">
 
 <script type="text/javascript">
-Reveal.initialize({
+  Reveal.initialize({
     controls: true,
     progress: true,
     history: true,
@@ -441,7 +441,7 @@ Reveal.initialize({
         { src: window.location.protocol+'//'+window.location.host+'/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
         { src: window.location.protocol+'//'+window.location.host+'/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
     ]
-});
+  });
 </script>
 
 

@@ -1,17 +1,17 @@
+<%var sliderFlag;if(item.type=='slider'){sliderFlag='<i class="fa fa-file-powerpoint-o"></i>';}else{sliderFlag=''}%> 
 <% if (item.link){ %>
   <% if (item.title){ %>
-    <h1 class="title"><a href="<%- item.link %>" target="_blank"><%= item.title %></a></h1>
+    <h1 class="title"><a href="<%- item.link %>" target="_blank"><%- sliderFlag %> <%= item.title %></a></h1>
   <% } else { %>
     <h1 class="title"><a href="<%- item.link %>" target="_blank"><%= item.link %></a></h1>
   <% } %>
 <% } else { %>
   <% if (index){ %>
     <h1 class="title">
-      <%if(item.type=='slider'){%><i class="fa fa-file-powerpoint-o"></i><%}%> 
-      <a href="<%- config.root %><%- item.path %>" target="_blank"><%= item.title %></a>
+      <a href="<%- config.root %><%- item.path %>" target="_blank"><%- sliderFlag %> <%= item.title %></a>
     </h1>
   <% } else { %>
-    <h1 class="title"><%= item.title %></h1>
+    <h1 class="title"><%- sliderFlag %> <%= item.title %></h1>
   <% } %>
 <% } %>
 <div class="collection">
