@@ -100,7 +100,7 @@ type: slider
 
     * DOM节点类型
 
-    * 实例分析
+    * [实例分析](/demo/tsinghua_web_frontend_slider_1.html)
 
 
 |元素名称|节点类型|节点值|
