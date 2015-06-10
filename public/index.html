@@ -122,6 +122,199 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 
   
     <h1 class="title">
+      <a href="/2015/06/10/tsinghua_web_frontend_slider/" target="_blank"><i class="fa fa-file-powerpoint-o"></i> web前端之原生DOM&amp;jQuery-DOM编程讲稿【清华大学】</a>
+    </h1>
+  
+
+<div class="collection">
+  
+  
+</div>
+<time datetime="2015-06-10T11:50:00.000Z"><a href="/2015/06/10/tsinghua_web_frontend_slider/">2015-06-10 07:50</a></time>
+<div class="clear"></div>
+      
+    </header>
+    
+      <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"><i class="fa fa-chevron-left"></i></div>
+    <div class="next"><i class="fa fa-chevron-right"></i></div>
+  </div>
+</div>
+    
+    <div class="entry">
+      
+        <h1 id="WEB前端开发">WEB前端开发</h1>
+<h3 id="——_原生DOM&amp;jQuery-DOM编程">—— 原生DOM&amp;jQuery-DOM编程</h3>
+<div style="height:80px;"></div>
+
+<hr>
+<p><div style="height:80px;"></div><br><strong> 美丽说商业前端负责人&emsp;熊伟烈 </strong></p>
+<p><a href="http://weibo.com/wileexiong" target="_blank"><i class="fa fa-weibo"></i> <span>-wilee-</span></a><span>&emsp;|&emsp;</span><a href="http://wilee.me" target="_blank"><i class="fa fa-home"></i> <span>http://wilee.me</span></a>&emsp;|&emsp;<a href="/image/weixin.jpg" target="_blank"><i class="fa fa-weixin"></i> <span>xiongwilee</span></a></p>
+<p><img src="/image/slider.png" alt="/image/slider.png"></p>
+<h2 id="课程大纲">课程大纲</h2>
+<ul>
+<li><p>第一章：DOM基础</p>
+<ul>
+<li>一、认识DOM</li>
+<li>二、DOM节点</li>
+<li>三、DOM节点的查改增删</li>
+<li>四、DOM相关的几个重要对象</li>
+<li>五、实例分析</li>
+</ul>
+</li>
+<li><p>第二章：原生DOM事件模型</p>
+<ul>
+<li>一、事件的分类</li>
+<li>二、添加事件处理程序</li>
+<li>三、移除事件处理程序</li>
+<li>四、深入Event</li>
+<li>五、实例分析</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>第三章：基于jQuery的DOM编程</p>
+<ul>
+<li>一、万能的$</li>
+<li>二、jQuery选择器</li>
+<li>三、DOM节点的增加与移除</li>
+<li>四、DOM属性与CSS</li>
+<li>五、jQuery事件处理</li>
+<li>六、jQuery动画</li>
+</ul>
+</li>
+<li><p>第四章：利用Chrome DevTool进行DOM调试</p>
+</li>
+<li><p>第五章：有趣的webAPP：微信及手机活动页的开发</p>
+</li>
+<li><p>随堂综合练习</p>
+</li>
+<li><p>Q/A时间</p>
+</li>
+</ul>
+<h2 id="第一章：DOM基础">第一章：DOM基础</h2>
+<ul>
+<li><p>一、认识DOM</p>
+</li>
+<li><p>二、DOM节点</p>
+</li>
+<li><p>三、DOM节点的查改增删</p>
+</li>
+<li><p>四、DOM相关的几个重要对象</p>
+</li>
+<li><p>五、实例分析</p>
+</li>
+</ul>
+<h2 id="一、认识DOM">一、认识DOM</h2>
+<ol>
+<li><p>DOM是什么？</p>
+<p> Document Object Model，文档对象模型，可以以一种独立于平台和语言的方式访问和修改一个文档的内容和结构，是表示和处理一个HTML或XML文档的常用方法。</p>
+</li>
+<li><p>DOM能做什么？</p>
+<p> 能让网页实现更丰富的交互效果，下面随便列几个案例看欣赏一下DOM的奇幻魅力！</p>
+<ol>
+<li>纸飞机： <a href="http://wilee.me/demo/plane_move.html" target="_blank" rel="external">http://wilee.me/demo/plane_move.html</a></li>
+<li>标准时间比例的太阳系：<a href="http://wilee.me/demo/solar.html" target="_blank" rel="external">http://wilee.me/demo/solar.html</a></li>
+<li>浏览器插件：<a href="http://wilee.me/demo/hi.html" target="_blank" rel="external">Hi一下！</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="二、DOM节点">二、DOM节点</h2>
+<ol>
+<li><p>DOM中对节点的定义</p>
+<ul>
+<li>整个文档是一个文档节点</li>
+<li>每个 HTML 标签是一个元素节点</li>
+<li>包含在 HTML 元素中的文本是文本节点</li>
+<li>每一个 HTML 属性是一个属性节点</li>
+<li>注释属于注释节点</li>
+</ul>
+</li>
+<li><p>节点类型</p>
+<ul>
+<li><p>DOM节点类型</p>
+</li>
+<li><p>实例分析</p>
+</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>元素名称</th>
+<th>节点类型</th>
+<th>节点值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>元素</td>
+<td>Node.ELEMENT_NODE</td>
+<td>1</td>
+</tr>
+<tr>
+<td>属性</td>
+<td>Node.ELEMENT_NODE</td>
+<td>1</td>
+</tr>
+<tr>
+<td>元素</td>
+<td>Node.ELEMENT_NODE</td>
+<td>1</td>
+</tr>
+<tr>
+<td>元素</td>
+<td>Node.ELEMENT_NODE</td>
+<td>1</td>
+</tr>
+<tr>
+<td>元素</td>
+<td>Node.ELEMENT_NODE</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer>
+      
+        <div class="alignleft">
+            <a href="/2015/06/10/tsinghua_web_frontend_slider/#more" class="more-link"><i class="fa fa-chevron-right"></i>更多</a>
+        </div>
+        
+        
+          <div class="alignright"> 
+            <a href="http://wilee.me/2015/06/10/tsinghua_web_frontend_slider/#comment" class="comment-link">
+              <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key="/2015/06/10/tsinghua_web_frontend_slider/">&nbsp;
+              </span>
+            </a>
+          </div>
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  <div class="post-content">
+    <header>
+      
+       
+
+  
+    <h1 class="title">
       <a href="/2015/06/09/slider-test/" target="_blank"><i class="fa fa-file-powerpoint-o"></i> 我所理解的登录</a>
     </h1>
   
@@ -1252,178 +1445,6 @@ Host key verification failed.
           <div class="alignright"> 
             <a href="http://wilee.me/2013/10/06/3168-webapp/#comment" class="comment-link">
               <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key="/2013/10/06/3168-webapp/">&nbsp;
-              </span>
-            </a>
-          </div>
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  <div class="post-content">
-    <header>
-      
-       
-
-  
-    <h1 class="title">
-      <a href="/2013/09/12/hello-git/" target="_blank"> GIT入门</a>
-    </h1>
-  
-
-<div class="collection">
-  
-  
-  <div class="categories">
-  	<i class="fa fa-folder-open"></i>
-    <a href="/categories/技术/">技术</a>
-  </div>
-
-  
-  
-  <div class="tags">
-  	<i class="fa fa-tag"></i>
-    <a href="/tags/GIT,Github/">GIT,Github</a>
-  </div>
-
-</div>
-<time datetime="2013-09-12T10:24:28.000Z"><a href="/2013/09/12/hello-git/">2013-09-12 06:24</a></time>
-<div class="clear"></div>
-      
-    </header>
-    
-      <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"><i class="fa fa-chevron-left"></i></div>
-    <div class="next"><i class="fa fa-chevron-right"></i></div>
-  </div>
-</div>
-    
-    <div class="entry">
-      
-        <p>git和svn不同的地方有一个索引的概念，需要把修改点提交到索引，之后在提交索引到仓库。</p>
-<h3 id="github使用好文章推荐">github使用好文章推荐</h3>
-<ul>
-<li>git入门: <a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">http://rogerdudler.github.io/git-guide/index.zh.html</a></li>
-<li>git详细:<a href="http://www.cnblogs.com/zhangjing230/archive/2012/05/09/2489745.html#gitdefintion" target="_blank" rel="external">http://www.cnblogs.com/zhangjing230/archive/2012/05/09/2489745.html#gitdefintion</a> </li>
-<li>git总结<a href="http://webzhangnan.github.io/2014/03/28/git-%E5%85%A5%E9%97%A8/" target="_blank" rel="external">http://webzhangnan.github.io/2014/03/28/git-%E5%85%A5%E9%97%A8/</a></li>
-<li>first:<a href="http://www.csser.com/board/4f53875c55bdcb545c000d05" target="_blank" rel="external">http://www.csser.com/board/4f53875c55bdcb545c000d05</a></li>
-<li>second: <a href="http://my.oschina.net/meilihao/blog/157716" target="_blank" rel="external">http://my.oschina.net/meilihao/blog/157716</a></li>
-<li>jekyll git page:<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">搭建一个免费的，无限流量的Blog——github Pages和Jekyll入门</a> </li>
-<li>中文介绍jeykyll详细:<a href="http://jekyllcn.com/" target="_blank" rel="external">http://jekyllcn.com/</a></li>
-<li>jekyll模板:<a href="https://github.com/jekyll/jekyll/wiki/Sites" target="_blank" rel="external">https://github.com/jekyll/jekyll/wiki/Sites</a></li>
-<li>jekyll详细1:<a href="http://blog.csdn.net/on_1y/article/details/19259435" target="_blank" rel="external">http://blog.csdn.net/on_1y/article/details/19259435</a></li>
-<li>jekyll详细2:<a href="http://higrid.net/c-art-jeklly_template_data.htm" target="_blank" rel="external">http://higrid.net/c-art-jeklly_template_data.htm</a></li>
-</ul>
-<h3 id="github合作思路">github合作思路</h3>
-<ul>
-<li>相关文章<a href="http://qbaty.iteye.com/blog/865368" target="_blank" rel="external">http://qbaty.iteye.com/blog/865368</a>、<a href="http://joshuasabrina.iteye.com/blog/1816597" target="_blank" rel="external">http://joshuasabrina.iteye.com/blog/1816597</a>、<a href="http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/" target="_blank" rel="external">http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/</a></li>
-</ul>
-<h3 id="必要的命令">必要的命令</h3>
-<p>1、语句设置默认。</p>
-<pre><code>git config --<span class="keyword">global</span> user.name <span class="string">'conan'</span>    
-</code></pre><p>等语句设置默认。 2、建立仓库。</p>
-<pre><code>git init    
-</code></pre><p> 3、添加修改到索引</p>
-<pre><code>git <span class="built_in">add</span> .    
-</code></pre><p>conan</p>
-<p> 4、提交索引中的修改到仓库</p>
-<pre><code>git <span class="operator"><span class="keyword">commit</span> -m <span class="string">"update"</span>    </span>
-</code></pre><p>5、在加一个-a参数就可以既将修改的内容添加到索引（新增文件时不可以），又提交</p>
-<pre><code>git <span class="operator"><span class="keyword">commit</span> <span class="keyword">commit</span> -am <span class="string">"add inde and commit"</span>    </span>
-</code></pre><p>6、检查还未提交到索引的修改</p>
-<pre><code>git diff    
-</code></pre><p>7、显示以往提交的记录</p>
-<pre><code>git <span class="built_in">log</span> --<span class="built_in">all</span>    
-</code></pre><p>8、显示当前的修改状态，提示修改了什么，或者增加了什么</p>
-<pre><code>git status    
-</code></pre><p>9、修改上一次commit(提交)的解释文本，下面操作是先提交，然后修改解释文本，然后查看log日志</p>
-<pre><code>git commit <span class="attribute">-m</span> <span class="string">"ready change"</span>
-git commit <span class="subst">--</span>amend <span class="attribute">-m</span> <span class="string">"change commit text"</span>
-git <span class="keyword">log</span>
-</code></pre><p>10、删除一个文件时，无法通过命令“git add .”来添加索引（<a href="http://js250.com" target="_blank" rel="external">柯楠</a>认为十分周全的考虑，避免意外删除）， 可以通过一下2种方式提交</p>
-<pre><code>git add <span class="attribute">-A</span> <span class="built_in">.</span> <span class="subst">&amp;&amp;</span> git commit <span class="attribute">-m</span> <span class="string">"delete file"</span>    
-
-git commit <span class="attribute">-am</span> <span class="string">"delte file"</span>    
-</code></pre><p>11、克隆本地仓库到一个远端仓库</p>
-<pre><code><span class="comment">git</span> <span class="comment">clone</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">bare</span> <span class="string">.</span> <span class="string">.</span><span class="string">.</span><span class="comment">/remote</span><span class="literal">-</span><span class="comment">repository</span><span class="string">.</span><span class="comment">git</span>     
-</code></pre><p>12、将修改的内容推送到远端仓库（先提交，再推送）</p>
-<pre><code>git commmit -am <span class="string">"read push remote"</span>
-git <span class="keyword">push</span> ../remote-repository<span class="preprocessor">.git</span>
-</code></pre><p>13、查看帮助</p>
-<pre><code>git init -<span class="keyword">help</span>
-git  add -<span class="keyword">help</span>     
-</code></pre><p>14、为远程仓库地址添加一个短名称（默认克隆源头的仓库短名称是”origin”）</p>
-<pre><code><span class="preprocessor">#设置短名称</span>
-git remote <span class="keyword">add</span> shortname ../remote-repository<span class="preprocessor">.git</span>
-</code></pre><p>修改内容</p>
-<p>echo ‘change’ test01</p>
-<p>提交</p>
-<pre><code>git <span class="operator"><span class="keyword">commit</span> -am <span class="string">"update of short name"</span></span>
-</code></pre><p>使用短名称推送</p>
-<pre><code>git <span class="keyword">push</span> shortname
-</code></pre><p>15、显示已经有的远端仓库</p>
-<pre><code>git <span class="comment">remote     </span>
-</code></pre><p>15、克隆一个远端仓库</p>
-<pre><code>git <span class="keyword">clone</span> https:<span class="comment">//github.com/webzhangnan/rocket_apps.git    </span>
-</code></pre><p>16、拉取远端仓库的修改</p>
-<pre><code>git pull https://github<span class="preprocessor">.com</span>/webzhangnan/rocket_apps<span class="preprocessor">.git</span>    
-</code></pre><p>上面的操作将会自动拉取并合并远程(<a href="https://github.com/webzhangnan/rocket_apps.git的master分支)和本地的分支。" target="_blank" rel="external">https://github.com/webzhangnan/rocket_apps.git的master分支)和本地的分支。</a></p>
-<p>可以分开操作先拉取</p>
-<pre><code>git fetch https://github<span class="preprocessor">.com</span>/webzhangnan/rocket_apps<span class="preprocessor">.git</span>    
-</code></pre><p>然后合并</p>
-<pre><code>git <span class="built_in">merge</span> <span class="keyword">https</span>://github.com/webzhangnan/rocket_apps.git     
-</code></pre><p>操作。</p>
-<p>17、删除新建的还未提交的文件</p>
-<pre><code>git clean <span class="operator">-f</span>    
-</code></pre><p>18、还原到老版本 首先显示所有的提交log日志</p>
-<pre><code>git <span class="built_in">log</span> --<span class="built_in">all</span>    
-</code></pre><p>然后checkout对应的commit_name就是commit后面那串字符</p>
-<pre><code>git checkout commit_name    
-</code></pre><p>或者使用（这种会浏览版本记录）</p>
-<pre><code>git revert commit_name    
-</code></pre><p>19、标记功能</p>
-<pre><code>git <span class="built_in">tag</span> version1<span class="number">.6</span> <span class="attribute">-m</span> <span class="string">'version 1.6'</span>      
-</code></pre><p>20、查看所有分支</p>
-<pre><code>git branch <span class="operator">-a</span>    
-</code></pre><p>21、创建分支</p>
-<pre><code>git branch newbranch    
-</code></pre><p>22、删除分支</p>
-<pre><code>git branch <span class="operator">-d</span> newbranch    
-</code></pre><p>23、合并分支</p>
-<pre><code>git <span class="operator"><span class="keyword">merge</span> newbranch    </span>
-</code></pre><p>或者使用合并工具</p>
-<pre><code>git mergetool     
-</code></pre><p>24、合并多个commit</p>
-<pre><code>git rebase <span class="attribute">-i</span> HEAD~<span class="number">7</span>    
-</code></pre><p>25、创建补丁</p>
-<pre><code><span class="preprocessor"># Create a new branch</span>
-git branch mybranch
-</code></pre><p>未完待续…</p>
-
-      
-    </div>
-    <footer>
-      
-        <div class="alignleft">
-            <a href="/2013/09/12/hello-git/#more" class="more-link"><i class="fa fa-chevron-right"></i>更多</a>
-        </div>
-        
-        
-          <div class="alignright"> 
-            <a href="http://wilee.me/2013/09/12/hello-git/#comment" class="comment-link">
-              <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key="/2013/09/12/hello-git/">&nbsp;
               </span>
             </a>
           </div>

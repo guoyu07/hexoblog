@@ -122,6 +122,178 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 
   
     <h1 class="title">
+      <a href="/2013/09/12/hello-git/" target="_blank"> GIT入门</a>
+    </h1>
+  
+
+<div class="collection">
+  
+  
+  <div class="categories">
+  	<i class="fa fa-folder-open"></i>
+    <a href="/categories/技术/">技术</a>
+  </div>
+
+  
+  
+  <div class="tags">
+  	<i class="fa fa-tag"></i>
+    <a href="/tags/GIT,Github/">GIT,Github</a>
+  </div>
+
+</div>
+<time datetime="2013-09-12T10:24:28.000Z"><a href="/2013/09/12/hello-git/">2013-09-12 06:24</a></time>
+<div class="clear"></div>
+      
+    </header>
+    
+      <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"><i class="fa fa-chevron-left"></i></div>
+    <div class="next"><i class="fa fa-chevron-right"></i></div>
+  </div>
+</div>
+    
+    <div class="entry">
+      
+        <p>git和svn不同的地方有一个索引的概念，需要把修改点提交到索引，之后在提交索引到仓库。</p>
+<h3 id="github使用好文章推荐">github使用好文章推荐</h3>
+<ul>
+<li>git入门: <a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">http://rogerdudler.github.io/git-guide/index.zh.html</a></li>
+<li>git详细:<a href="http://www.cnblogs.com/zhangjing230/archive/2012/05/09/2489745.html#gitdefintion" target="_blank" rel="external">http://www.cnblogs.com/zhangjing230/archive/2012/05/09/2489745.html#gitdefintion</a> </li>
+<li>git总结<a href="http://webzhangnan.github.io/2014/03/28/git-%E5%85%A5%E9%97%A8/" target="_blank" rel="external">http://webzhangnan.github.io/2014/03/28/git-%E5%85%A5%E9%97%A8/</a></li>
+<li>first:<a href="http://www.csser.com/board/4f53875c55bdcb545c000d05" target="_blank" rel="external">http://www.csser.com/board/4f53875c55bdcb545c000d05</a></li>
+<li>second: <a href="http://my.oschina.net/meilihao/blog/157716" target="_blank" rel="external">http://my.oschina.net/meilihao/blog/157716</a></li>
+<li>jekyll git page:<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">搭建一个免费的，无限流量的Blog——github Pages和Jekyll入门</a> </li>
+<li>中文介绍jeykyll详细:<a href="http://jekyllcn.com/" target="_blank" rel="external">http://jekyllcn.com/</a></li>
+<li>jekyll模板:<a href="https://github.com/jekyll/jekyll/wiki/Sites" target="_blank" rel="external">https://github.com/jekyll/jekyll/wiki/Sites</a></li>
+<li>jekyll详细1:<a href="http://blog.csdn.net/on_1y/article/details/19259435" target="_blank" rel="external">http://blog.csdn.net/on_1y/article/details/19259435</a></li>
+<li>jekyll详细2:<a href="http://higrid.net/c-art-jeklly_template_data.htm" target="_blank" rel="external">http://higrid.net/c-art-jeklly_template_data.htm</a></li>
+</ul>
+<h3 id="github合作思路">github合作思路</h3>
+<ul>
+<li>相关文章<a href="http://qbaty.iteye.com/blog/865368" target="_blank" rel="external">http://qbaty.iteye.com/blog/865368</a>、<a href="http://joshuasabrina.iteye.com/blog/1816597" target="_blank" rel="external">http://joshuasabrina.iteye.com/blog/1816597</a>、<a href="http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/" target="_blank" rel="external">http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/</a></li>
+</ul>
+<h3 id="必要的命令">必要的命令</h3>
+<p>1、语句设置默认。</p>
+<pre><code>git config --<span class="keyword">global</span> user.name <span class="string">'conan'</span>    
+</code></pre><p>等语句设置默认。 2、建立仓库。</p>
+<pre><code>git init    
+</code></pre><p> 3、添加修改到索引</p>
+<pre><code>git <span class="built_in">add</span> .    
+</code></pre><p>conan</p>
+<p> 4、提交索引中的修改到仓库</p>
+<pre><code>git <span class="operator"><span class="keyword">commit</span> -m <span class="string">"update"</span>    </span>
+</code></pre><p>5、在加一个-a参数就可以既将修改的内容添加到索引（新增文件时不可以），又提交</p>
+<pre><code>git <span class="operator"><span class="keyword">commit</span> <span class="keyword">commit</span> -am <span class="string">"add inde and commit"</span>    </span>
+</code></pre><p>6、检查还未提交到索引的修改</p>
+<pre><code>git diff    
+</code></pre><p>7、显示以往提交的记录</p>
+<pre><code>git <span class="built_in">log</span> --<span class="built_in">all</span>    
+</code></pre><p>8、显示当前的修改状态，提示修改了什么，或者增加了什么</p>
+<pre><code>git status    
+</code></pre><p>9、修改上一次commit(提交)的解释文本，下面操作是先提交，然后修改解释文本，然后查看log日志</p>
+<pre><code>git commit <span class="attribute">-m</span> <span class="string">"ready change"</span>
+git commit <span class="subst">--</span>amend <span class="attribute">-m</span> <span class="string">"change commit text"</span>
+git <span class="keyword">log</span>
+</code></pre><p>10、删除一个文件时，无法通过命令“git add .”来添加索引（<a href="http://js250.com" target="_blank" rel="external">柯楠</a>认为十分周全的考虑，避免意外删除）， 可以通过一下2种方式提交</p>
+<pre><code>git add <span class="attribute">-A</span> <span class="built_in">.</span> <span class="subst">&amp;&amp;</span> git commit <span class="attribute">-m</span> <span class="string">"delete file"</span>    
+
+git commit <span class="attribute">-am</span> <span class="string">"delte file"</span>    
+</code></pre><p>11、克隆本地仓库到一个远端仓库</p>
+<pre><code><span class="comment">git</span> <span class="comment">clone</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">bare</span> <span class="string">.</span> <span class="string">.</span><span class="string">.</span><span class="comment">/remote</span><span class="literal">-</span><span class="comment">repository</span><span class="string">.</span><span class="comment">git</span>     
+</code></pre><p>12、将修改的内容推送到远端仓库（先提交，再推送）</p>
+<pre><code>git commmit -am <span class="string">"read push remote"</span>
+git <span class="keyword">push</span> ../remote-repository<span class="preprocessor">.git</span>
+</code></pre><p>13、查看帮助</p>
+<pre><code>git init -<span class="keyword">help</span>
+git  add -<span class="keyword">help</span>     
+</code></pre><p>14、为远程仓库地址添加一个短名称（默认克隆源头的仓库短名称是”origin”）</p>
+<pre><code><span class="preprocessor">#设置短名称</span>
+git remote <span class="keyword">add</span> shortname ../remote-repository<span class="preprocessor">.git</span>
+</code></pre><p>修改内容</p>
+<p>echo ‘change’ test01</p>
+<p>提交</p>
+<pre><code>git <span class="operator"><span class="keyword">commit</span> -am <span class="string">"update of short name"</span></span>
+</code></pre><p>使用短名称推送</p>
+<pre><code>git <span class="keyword">push</span> shortname
+</code></pre><p>15、显示已经有的远端仓库</p>
+<pre><code>git <span class="comment">remote     </span>
+</code></pre><p>15、克隆一个远端仓库</p>
+<pre><code>git <span class="keyword">clone</span> https:<span class="comment">//github.com/webzhangnan/rocket_apps.git    </span>
+</code></pre><p>16、拉取远端仓库的修改</p>
+<pre><code>git pull https://github<span class="preprocessor">.com</span>/webzhangnan/rocket_apps<span class="preprocessor">.git</span>    
+</code></pre><p>上面的操作将会自动拉取并合并远程(<a href="https://github.com/webzhangnan/rocket_apps.git的master分支)和本地的分支。" target="_blank" rel="external">https://github.com/webzhangnan/rocket_apps.git的master分支)和本地的分支。</a></p>
+<p>可以分开操作先拉取</p>
+<pre><code>git fetch https://github<span class="preprocessor">.com</span>/webzhangnan/rocket_apps<span class="preprocessor">.git</span>    
+</code></pre><p>然后合并</p>
+<pre><code>git <span class="built_in">merge</span> <span class="keyword">https</span>://github.com/webzhangnan/rocket_apps.git     
+</code></pre><p>操作。</p>
+<p>17、删除新建的还未提交的文件</p>
+<pre><code>git clean <span class="operator">-f</span>    
+</code></pre><p>18、还原到老版本 首先显示所有的提交log日志</p>
+<pre><code>git <span class="built_in">log</span> --<span class="built_in">all</span>    
+</code></pre><p>然后checkout对应的commit_name就是commit后面那串字符</p>
+<pre><code>git checkout commit_name    
+</code></pre><p>或者使用（这种会浏览版本记录）</p>
+<pre><code>git revert commit_name    
+</code></pre><p>19、标记功能</p>
+<pre><code>git <span class="built_in">tag</span> version1<span class="number">.6</span> <span class="attribute">-m</span> <span class="string">'version 1.6'</span>      
+</code></pre><p>20、查看所有分支</p>
+<pre><code>git branch <span class="operator">-a</span>    
+</code></pre><p>21、创建分支</p>
+<pre><code>git branch newbranch    
+</code></pre><p>22、删除分支</p>
+<pre><code>git branch <span class="operator">-d</span> newbranch    
+</code></pre><p>23、合并分支</p>
+<pre><code>git <span class="operator"><span class="keyword">merge</span> newbranch    </span>
+</code></pre><p>或者使用合并工具</p>
+<pre><code>git mergetool     
+</code></pre><p>24、合并多个commit</p>
+<pre><code>git rebase <span class="attribute">-i</span> HEAD~<span class="number">7</span>    
+</code></pre><p>25、创建补丁</p>
+<pre><code><span class="preprocessor"># Create a new branch</span>
+git branch mybranch
+</code></pre><p>未完待续…</p>
+
+      
+    </div>
+    <footer>
+      
+        <div class="alignleft">
+            <a href="/2013/09/12/hello-git/#more" class="more-link"><i class="fa fa-chevron-right"></i>更多</a>
+        </div>
+        
+        
+          <div class="alignright"> 
+            <a href="http://wilee.me/2013/09/12/hello-git/#comment" class="comment-link">
+              <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key="/2013/09/12/hello-git/">&nbsp;
+              </span>
+            </a>
+          </div>
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  <div class="post-content">
+    <header>
+      
+       
+
+  
+    <h1 class="title">
       <a href="/2013/09/10/3149-2-steps-to-get-node-blog-running/" target="_blank"> 正义感从何而来？</a>
     </h1>
   
@@ -1289,212 +1461,13 @@ b.toString() == <span class="string">'http://www.baidu.com/'</span>;<span class=
 
 
 
-  <article class="post">
-  <div class="post-content">
-    <header>
-      
-       
-
-  
-    <h1 class="title">
-      <a href="/2012/08/12/3155-fe/" target="_blank"> 简单的选项卡DEMO</a>
-    </h1>
-  
-
-<div class="collection">
-  
-  
-  
-  <div class="tags">
-  	<i class="fa fa-tag"></i>
-    <a href="/tags/fe,-demo/">fe, demo</a>
-  </div>
-
-</div>
-<time datetime="2012-08-12T15:06:50.000Z"><a href="/2012/08/12/3155-fe/">2012-08-12 11:06</a></time>
-<div class="clear"></div>
-      
-    </header>
-    
-      <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"><i class="fa fa-chevron-left"></i></div>
-    <div class="next"><i class="fa fa-chevron-right"></i></div>
-  </div>
-</div>
-    
-    <div class="entry">
-      
-        <p>给初学JS的老哥写了一个很简单的选项卡DEMO，配上最通俗易懂的注释;这是DEMO <a href="/demo/tab.html">/demo/tab.html</a></p>
-<pre><code><span class="doctype">&lt;!doctype html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">title</span>&gt;</span>简易选项卡DEMO<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
-<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span> /&gt;</span>
-<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.0/jquery.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
-*<span class="rules">{
-    <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span>px</span></span>;
-    <span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">0</span>px</span></span>;
-<span class="rule">}</span></span>
-<span class="class">.clearfix</span><span class="pseudo">:after</span> <span class="rules">{
-    <span class="rule"><span class="attribute">content</span>:<span class="value"><span class="string">'\20'</span></span></span>;
-    <span class="rule"><span class="attribute">display</span>:<span class="value">block</span></span>;
-    <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">0</span></span></span>;
-    <span class="rule"><span class="attribute">clear</span>:<span class="value">both</span></span>;
-<span class="rule">}</span></span>
-<span class="class">.clearfix</span> <span class="rules">{
-    <span class="rule"><span class="attribute">zoom</span>:<span class="value"><span class="number">1</span></span></span>;
-<span class="rule">}</span></span>
-
-<span class="class">.wrapper</span><span class="rules">{
-    <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">500</span>px</span></span>;
-    <span class="rule"><span class="attribute">border</span>:<span class="value"><span class="number">1</span>px solid <span class="hexcolor">#dfdfdf</span></span></span>;
-<span class="rule">}</span></span>
-<span class="class">.wrapper</span> <span class="class">.tab-nav</span><span class="rules">{
-    <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#efefef</span></span></span>;
-    <span class="rule"><span class="attribute">border-bottom</span>:<span class="value"> <span class="number">1</span>px solid <span class="hexcolor">#dfdfdf</span></span></span>;
-<span class="rule">}</span></span>
-<span class="class">.wrapper</span> <span class="class">.tab-nav-list</span><span class="rules">{
-    <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;
-    <span class="rule"><span class="attribute">float</span>:<span class="value">left</span></span>;
-    <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">30</span>px</span></span>;
-    <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">160</span>px</span></span>;
-    <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">30</span>px</span></span>;
-    <span class="rule"><span class="attribute">text-align</span>:<span class="value"> center</span></span>;
-    <span class="rule"><span class="attribute">cursor</span>:<span class="value"> pointer</span></span>;
-    <span class="rule"><span class="attribute">transition</span>:<span class="value">.<span class="number">3</span>s</span></span>;
-<span class="rule">}</span></span>
-<span class="class">.wrapper</span> <span class="class">.tab-nav-list</span><span class="pseudo">:hover</span><span class="rules">{
-    <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#dddddd</span></span></span>;
-<span class="rule">}</span></span>
-
-<span class="class">.wrapper</span> <span class="class">.tab-content</span><span class="rules">{
-    <span class="rule"><span class="attribute">display</span>:<span class="value">none</span></span>;
-    <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">30</span>px</span></span>;
-    <span class="rule"><span class="attribute">padding-left</span>:<span class="value"> <span class="number">30</span>px</span></span>;
-<span class="rule">}</span></span>
-<span class="class">.wrapper</span> <span class="class">.tab-content</span><span class="class">.active</span><span class="rules">{
-    <span class="rule"><span class="attribute">display</span>:<span class="value">block</span></span>;
-<span class="rule">}</span></span>
-</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"wrapper"</span>&gt;</span>
-
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tab-nav clearfix"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tab-ul clearfix"</span> <span class="attribute">id</span>=<span class="value">"tabNav"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"tab-nav-list"</span> <span class="attribute">data-tab</span>=<span class="value">"a"</span>&gt;</span>选项一<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"tab-nav-list"</span> <span class="attribute">data-tab</span>=<span class="value">"b"</span>&gt;</span>选项二<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"tab-nav-list"</span> <span class="attribute">data-tab</span>=<span class="value">"c"</span>&gt;</span>选项三<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-
-        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tab-wrapper"</span> <span class="attribute">id</span>=<span class="value">"tabWrapper"</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tab-content active"</span> <span class="attribute">data-tab</span>=<span class="value">"a"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试一测试一测试一测试一测试一测试一测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试一测试一测试一测试一测试一测试一测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试一测试一测试一测试一测试一测试一测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试一测试一测试一测试一测试一测试一测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试一测试一测试一测试一测试一测试一测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试一测试一测试一测试一测试一测试一测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tab-content"</span> <span class="attribute">data-tab</span>=<span class="value">"b"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试二测试二测试二测试二测试二测试二测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试二测试二测试二测试二测试二测试二测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试二测试二测试二测试二测试二测试二测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试二测试二测试二测试二测试二测试二测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试二测试二测试二测试二测试二测试二测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试二测试二测试二测试二测试二测试二测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tab-content"</span> <span class="attribute">data-tab</span>=<span class="value">"c"</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试三测试三测试三测试三测试三测试三测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试三测试三测试三测试三测试三测试三测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试三测试三测试三测试三测试三测试三测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试三测试三测试三测试三测试三测试三测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试三测试三测试三测试三测试三测试三测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">li</span>&gt;</span>测试三测试三测试三测试三测试三测试三测试…<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-
-$(<span class="string">'#tabNav'</span>).mouseover(changeView)
-<span class="comment">//$('#tabNav')为获取id="tabNav"的标签</span>
-<span class="comment">//对id="tabNav"的节点绑定mouseover(鼠标浮动在标签上的时候)事件</span>
-<span class="comment">//事实上 $('#tabNav').mouseover() 就是一个函数，函数的参数也是一个function: 即下面的changeView函数；mouseover()会传递一个event（事件对象），该event包括：具体在哪一个标签节点上，鼠标此时的位置等等</span>
-
-<span class="comment">//顺便说一下，如果不想在鼠标浮动在标签上就切换，而是想在点击的时候才切换可以使用click方法：</span>
-<span class="comment">//就像这样：$('#tabNav').click(changeView)</span>
-
-<span class="function"><span class="keyword">function</span> <span class="title">changeView</span><span class="params">(event)</span>{</span>
-<span class="comment">//该方法的参数是event,也就是鼠标浮动的当时状态的一个对象，包括：具体在哪一个标签节点上，鼠标此时的位置等等</span>
-    <span class="keyword">var</span> target = event.target,<span class="comment">//获取鼠标此时正在具体哪一个标签上，对应的为&lt;li class="tab-nav-list" data-tab="a"&gt;选项一&lt;/li&gt; ，或 &lt;li class="tab-nav-list" data-tab="b"&gt;选项二&lt;/li&gt; ， 或 &lt;li class="tab-nav-list" data-tab="c"&gt;选项三&lt;/li&gt; </span>
-
-        curTab = $(target).attr(<span class="string">'data-tab'</span>);<span class="comment">//获取该标签的data-tab属性，这并不是一个标签的常用属性，而是用来标记该标签的自定义属性</span>
-
-    <span class="keyword">if</span>(curTab){<span class="comment">//如果此时鼠标浮动的标签有data-tab属性的话就执行下面的语句</span>
-
-        <span class="keyword">var</span> tabs = $(<span class="string">'#tabWrapper .tab-content'</span>),<span class="comment">//获取所有的选项卡,类似于CSS中的#tabWrapper .tab-content ,这是一个数组</span>
-
-            $tab;
-
-        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;tabs.length;i++){
-            <span class="comment">//用一个for循环来获取所有的选项卡，一一做处理</span>
-            <span class="comment">//处理的原理很简单：如果当前选项的data-tab属性等于刚刚获取到的选项卡data-tab属性的话，就给他加一个active类；如果不等于的话就把它的active类去掉</span>
-            <span class="comment">//在最上面的CSS声明中有一个类.class{display:none}</span>
-            <span class="comment">//这样就可以做到：对鼠标选中的类加上active属性，对鼠标没有选中的类删除active从而做到了想要隐藏的就隐藏，想要展现的就展现的目的</span>
-
-            <span class="keyword">if</span>($(tabs[i]).attr(<span class="string">'data-tab'</span>) == curTab){
-            <span class="comment">//$(tabs[i])就是for循环中单一循环体，用来判断它的data-tab属性是否等于刚刚鼠标浮动在tab上的data-tab属性</span>
-                $(tabs[i]).addClass(<span class="string">'active'</span>)
-            }<span class="keyword">else</span>{                
-                $(tabs[i]).removeClass(<span class="string">'active'</span>)
-            }
-
-        }
-    }
-
-}
-</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
-</code></pre>
-      
-    </div>
-    <footer>
-      
-        <div class="alignleft">
-            <a href="/2012/08/12/3155-fe/#more" class="more-link"><i class="fa fa-chevron-right"></i>更多</a>
-        </div>
-        
-        
-          <div class="alignright"> 
-            <a href="http://wilee.me/2012/08/12/3155-fe/#comment" class="comment-link">
-              <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key="/2012/08/12/3155-fe/">&nbsp;
-              </span>
-            </a>
-          </div>
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
     <a href="/" class="alignleft prev"><i class="fa fa-long-arrow-left"></i>prev</a>
   
+  
+    <a href="/page/3/" class="alignright next">next<i class="fa fa-long-arrow-right"></i></a>
   
   <div class="clearfix"></div>
 </nav>

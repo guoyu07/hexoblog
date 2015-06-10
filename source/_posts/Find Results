@@ -1,0 +1,22 @@
+Searching 21 files for "powerpoint" (case sensitive, whole word)
+
+/Users/xiongweilie/projects/github/hexoblog/themes/hexo-themes-wilee/layout/_partial/post/title.ejs:
+    8    <% if (index){ %>
+    9      <h1 class="title">
+   10:       <%if(item.type=='slider'){%><i class="fa fa-file-powerpoint-o"></i><%}%> 
+   11        <a href="<%- config.root %><%- item.path %>" target="_blank"><%= item.title %></a>
+   12      </h1>
+
+1 match in 1 file
+
+
+Searching 69 files for "意见反馈" (case sensitive)
+
+/Users/xiongweilie/projects/mls/whornbill/apps/order_pc/views/foot.html:
+   23  				<li><a href="<%= this.DOMAIN.www%>/help/" target="_blank">新手指南</a></li>
+   24  				<li><a href="<%= this.DOMAIN.www%>/mlsmapinfo/"  target="_blank">网站地图</a></li>
+   25: 				<li><a href="<%= this.DOMAIN.www%>/helpcenter/" target="_blank">帮助中心</a></li>
+   26  			</ul>
+   27  		</div>
+
+1 match in 1 file
