@@ -10,7 +10,7 @@
   </div>
 </div>
 <%- js(['/reveal/lib/head.min.js','/reveal/reveal.js']) %>
-<%- css(['/reveal/style/reveal.css','/reveal/style/theme/moon.css']) %>
+<%- css(['/reveal/style/reveal.css','/reveal/style/theme/moon.css','/reveal/style/highlight/atelier-plateau.light.css']) %>
 <script type="text/javascript">
   Reveal.initialize({
     controls: true,
@@ -27,6 +27,7 @@
 
     // Optional libraries used to extend on reveal.js
     dependencies: [
+        { src: window.location.protocol+'//'+window.location.host+'/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
         { src: window.location.protocol+'//'+window.location.host+'/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
         { src: window.location.protocol+'//'+window.location.host+'/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
         { src: window.location.protocol+'//'+window.location.host+'/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },

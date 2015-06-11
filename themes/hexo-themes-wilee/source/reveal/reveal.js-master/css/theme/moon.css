@@ -1,5 +1,5 @@
 @import url(../../lib/font/league-gothic/league-gothic.css);
-/*@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 /**
  * Solarized Dark theme for reveal.js.
  * Author: Achim Staebler
@@ -20,7 +20,7 @@ body {
 
 .reveal {
   font-family: 'Lato', sans-serif;
-  font-size: 24px;
+  font-size: 36px;
   font-weight: normal;
   color: #93a1a1; }
 
@@ -31,7 +31,6 @@ body {
 
 .reveal .slides > section, .reveal .slides > section > section {
   line-height: 1.3;
-  text-align: left;
   font-weight: inherit; }
 
 /*********************************************
@@ -148,8 +147,8 @@ body {
   overflow: auto;
   max-height: 400px;
   word-wrap: normal;
-  border-radius: 3px;
-  box-shadow: inset 0px 0px 5px rgba(0,0,0,.5); }
+  background: #3F3F3F;
+  color: #DCDCDC; }
 
 .reveal table {
   margin: auto;
