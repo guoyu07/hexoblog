@@ -317,14 +317,12 @@ article header .collection .tags {
   display: inline-block;
 }
 article header time {
-  position: absolute;
-  right: 0;
-  top: 45px;
   color: #777;
-  font: 0.9em "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 1em "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   margin-bottom: 5px;
-  display: block;
+  display: inline-block;
   line-height: 1;
+  margin-right: 10px;
 }
 article header .title {
   font-weight: normal;
@@ -704,9 +702,7 @@ article footer .tags {
   line-height: 80px;
 }
 .archive article time {
-  position: absolute;
-  top: 30px;
-  right: 0px;
+  display: inline-block;
 }
 .archive article .post-content {
   margin-bottom: 0;

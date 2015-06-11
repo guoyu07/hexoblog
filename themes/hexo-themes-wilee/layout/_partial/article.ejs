@@ -11,7 +11,9 @@
     <div class="entry">
       <% if (item.excerpt && index){ %>
         <%- item.excerpt %>
-      <% } else { %>
+      <% } else if(item.type == 'slider') { %>
+        <p><%- item.description || item.title %></p>
+      <% } else{ %>
         <%- item.content %>
       <% } %>
     </div>
