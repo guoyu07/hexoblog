@@ -675,17 +675,17 @@ BTW：其他情况均可通过这样的方式进行事件默认行为的阻止�
 
 ## 第三章：基于jQuery的DOM编程
 
-* 万能的$
+### 3.1 万能的$
 
-* jQuery选择器
+### 3.2 jQuery选择器
 
-* DOM节点的增加与移除
+### 3.3 DOM节点的增加与移除
 
-* DOM属性与CSS
+### 3.4 DOM属性与CSS
 
-* jQuery事件处理
+### 3.5 jQuery事件处理
 
-* jQuery动画
+### 3.6 jQuery动画
 
 
 
@@ -701,7 +701,9 @@ $符是jQuery的一个别名，通过它，能完成非常丰富的DOM操作，�
 $('a').click(function(e){
     alert($(this).attr('href'));
 });
- 
+```
+
+```JavaScript
 // 生成随机颜色值：#RRGGBB
 var getRandomColor = function(){
     return '#' + (new Number(Math.floor(Math.random() * 256))).toString(16)
