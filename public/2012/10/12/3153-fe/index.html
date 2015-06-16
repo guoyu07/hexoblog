@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>一个简单的异步上传组件 | Wilee</title>
+
+  <meta name="author" content="xiongwilee">
+  
+  <meta name="description" content="blog">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="一个简单的异步上传组件"/>
+  <meta property="og:site_name" content="Wilee"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Wilee" type="application/atom+xml">
+  <link rel="stylesheet" href="/bootstrap/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="/fontawesome/css/font-awesome.css" type="text/css">
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="//apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!--[if lt IE 9]><script src="/js/html5.js"></script><![endif]-->
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3460af47268846ca3d274b44b6aeb8ce' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</head>
+
+<body>
+
+  <header id="header" class='normal_mode'>
+    <div id="top">
+  <nav id="nav">
+    <ul class='main-nav-ul'><!-- 
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+       -->
+      <li><a href="/"><i class="fa fa-home"></i></a></li>
+    </ul>
+  </nav>
+  <form id="search" class="search" action="http://www.baidu.com/s" method="get">
+  	<input type="text" class="search_text" placeholder="search" autocomplete="off">
+  	<input type="hidden" class="search_hidden" name="wd">
+  	<button type="submit" class="search_btn fa fa-search"></button>
+  </form>
+</div>
+<script>
+(function($){
+  $('#search .search_btn').click(function(){
+    var formEle = $('#search'),
+      textEle = $("#search .search_text"),
+      hiddenEle = $("#search .search_hidden");
+    hiddenEle.val(textEle.val()+' site:wilee.me');
+    formEle.submit()
+  })
+})(jQuery)
+</script>
+  </header>
+
+
+  <div id="content" class="container" data-0="box-shadow:0px 0px 100px rgba(0,0,0,.5)" data-800="box-shadow:0px 0px 1000px rgba(0,0,0,1)">
+
+    
+<article class="post">
+  <div class="post-content">
+    <header>
+      
+       
+
+  
+    <h1 class="title"> 一个简单的异步上传组件</h1>
+  
+
+<div class="collection">
+  <time datetime="2012-10-12T14:50:28.000Z"><i class="fa fa-clock-o"></i><span> 2012-10-12 10:50</span></time>
+  
+  
+  
+  <div class="tags">
+  	<i class="fa fa-tag"></i>
+    <a href="/tags/fe,-upload/">fe, upload</a>
+  </div>
+
+</div>
+<div class="clear"></div>
+      
+    </header>
+    
+      <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"><i class="fa fa-chevron-left"></i></div>
+    <div class="next"><i class="fa fa-chevron-right"></i></div>
+  </div>
+</div>
+    
+    <div class="entry">
+      
+        <p>工作需要，要写一个简单的文件异步上传功能，首先想到的是jquery的ajaxUpload组件，但是公司用的是tangram，为了这样的一个功能再去引一个jquery实在太亏了;问了一圈同事好像都没有提供这个功能的“库存”，只好自己写了。</p>
+<p>查了一些资料，实现单文件异步提交还是很简单的。大致思路是<strong> 生成一个form表单，target到iframe中去，由后端进行处理，然后再把上传结果信息以html 里的JS全局变量形式返回到iframe，外层实时监听iframe里的JS全局变量即可 </strong>。（看起来像是发起跨域异步请求的方法，但事实上这是不支持跨域的）</p>
+<p>还有一点需要注意的是，<strong> 如果需要修改提交表单的样式，最佳方案是隐藏当前表单 </strong>（这里是指：opacity: 0;或 filter:progid:DXImageTransform.Microsoft.Alpha(opacity:0);），然后在下面加上按钮背景。</p>
+<p>JS代码如下：</p>
+<pre><code><span class="list">(<span class="title">function</span><span class="list">($, ns)</span>{
+    <span class="string">"use strict"</span><span class="comment">;</span>
+
+    function ajaxUpload<span class="list">(<span class="title">cfg</span>)</span>{
+        this.name = cfg.name || <span class="string">""</span><span class="comment">;</span>
+        this.rendId = cfg.rendId<span class="comment">;</span>
+        this.actionUrl = cfg.actionUrl || '/sec/forgot/appeal/upload'<span class="comment">;</span>
+        this.method = cfg.method || <span class="string">"post"</span><span class="comment">;</span>
+        this.data = cfg.data<span class="comment">;</span>
+        this.status = '<span class="number">0</span>'<span class="comment">;//初始状态</span>
+
+        this.onSuccess = cfg.onSuccess || function<span class="list">()</span>{}<span class="comment">;</span>
+        this.onSending = cfg.onSending || function<span class="list">()</span>{}<span class="comment">;</span>
+        this.onFailure = cfg.onFailure || function<span class="list">()</span>{}<span class="comment">;</span>
+
+        var _init = function<span class="list">(<span class="title">me</span>)</span>{
+            me.init<span class="list">()</span><span class="comment">;</span>
+        }
+        _init<span class="list">(<span class="title">this</span>)</span><span class="comment">;</span>
+    }
+
+    ajaxUpload.prototype.init = function<span class="list">()</span>{
+
+        this.render<span class="list">()</span><span class="comment">;</span>
+    }
+
+    ajaxUpload.prototype.hiddenTpl = function<span class="list">()</span>{
+        var hiddenTpl = ''<span class="comment">;</span>
+        for<span class="list">(<span class="title">var</span> item in this.data)</span>{
+            hiddenTpl = hiddenTpl + '&lt;input type=<span class="string">"hidden"</span> name=<span class="string">"'+item+'"</span> value=<span class="string">"'+this.data[item]+'"</span>&gt;'
+        }
+        return hiddenTpl<span class="comment">;</span>
+    }
+
+    ajaxUpload.prototype.getTpl = function<span class="list">()</span>{
+        return {
+            wrapper:'&lt;div class=<span class="string">"ajaxUpload"</span>&gt;',
+            buttonEle:'&lt;div class=<span class="string">"ajaxUpload-show clearfix"</span> &gt;&lt;button class=<span class="string">"ajaxUpload-button"</span>&gt;选择文件&lt;/button&gt;&lt;span class=<span class="string">"ajaxUpload-info"</span>&gt;&lt;/span&gt;&lt;/div&gt;',
+            form:''+
+        '&lt;form class=<span class="string">"ajaxupload-form"</span> enctype=<span class="string">"multipart/form-data"</span> target=<span class="string">"ajaxUploadIframe"</span> action=<span class="string">"'+this.actionUrl+'"</span> method=<span class="string">"'+this.method+'"</span>&gt;'+
+            '&lt;input type=<span class="string">"file"</span> name=<span class="string">"'+this.name+'"</span> class=<span class="string">"ajaxupload-form-file"</span>/&gt;'+
+            '&lt;input type=<span class="string">"hidden"</span> name=<span class="string">"picid"</span> class=<span class="string">"ajaxupload-form-picid"</span> value=<span class="string">""</span>&gt;'+
+            this.hiddenTpl<span class="list">()</span>+
+        '&lt;/form&gt;',
+            iframe:''+
+        '&lt;iframe class=<span class="string">"ajaxupload-iframe"</span> name=<span class="string">"ajaxUploadIframe"</span> style=<span class="string">"display:none"</span>&gt;&lt;/iframe&gt;'
+        }
+    }
+
+    ajaxUpload.prototype.render = function<span class="list">()</span>{
+        var tpl = this.getTpl<span class="list">()</span>,
+            ele = {},
+            me = this<span class="comment">;</span>
+
+        ele.wrapper = $<span class="list">(<span class="title">tpl</span>.wrapper)</span><span class="comment">;</span>
+        ele.formEle = $<span class="list">(<span class="title">tpl</span>.form)</span><span class="comment">;</span>
+        ele.buttonEle = $<span class="list">(<span class="title">tpl</span>.buttonEle)</span><span class="comment">;</span>
+        ele.iframeEle = $<span class="list">(<span class="title">tpl</span>.iframe)</span><span class="comment">;</span>
+
+        $<span class="list">('#'+this.rendId)</span>.append<span class="list">(<span class="title">ele</span>.wrapper)</span><span class="comment">;</span>
+        $<span class="list">(<span class="title">ele</span>.wrapper)</span>.append<span class="list">(<span class="title">ele</span>.buttonEle)</span><span class="comment">;</span>
+        $<span class="list">(<span class="title">ele</span>.wrapper)</span>.append<span class="list">(<span class="title">ele</span>.formEle)</span><span class="comment">;</span>
+        $<span class="list">(<span class="title">document</span>.body)</span>.append<span class="list">(<span class="title">ele</span>.iframeEle)</span><span class="comment">;</span>
+
+        ele.fileEle = $<span class="list">('.ajaxUpload .ajaxupload-form-file')</span><span class="comment">;</span>
+        ele.picidEle = $<span class="list">('.ajaxUpload .ajaxupload-form-picid')</span><span class="comment">;</span>
+        ele.msgEle = $<span class="list">('.ajaxUpload .ajaxUpload-info')</span><span class="comment">;</span>
+
+        this.ele = ele<span class="comment">;</span>
+
+        $<span class="list">(<span class="title">ele</span>.buttonEle)</span>.on<span class="list">('click',function<span class="list">()</span>{
+            ele.fileEle.trigger<span class="list">('click')</span><span class="comment">;</span>
+        })</span>
+        $<span class="list">(<span class="title">ele</span>.fileEle)</span>.on<span class="list">('change',function<span class="list">(<span class="title">event</span>)</span>{
+            var filesData = {}<span class="comment">;</span>
+            if<span class="list">(<span class="title">event</span>.target.files <span class="keyword">&amp;&amp;</span> event.target.files[<span class="number">0</span>])</span>{
+                filesData.type = event.target.files[<span class="number">0</span>].type<span class="comment">;</span>
+                filesData.name = event.target.files[<span class="number">0</span>].name<span class="comment">;</span>
+                filesData.size = event.target.files[<span class="number">0</span>].size<span class="comment">;</span>
+            }else if<span class="list">(<span class="title">event</span>.target <span class="keyword">&amp;&amp;</span> event.target.value)</span>{
+                filesData.type = 'image/' + event.target.value.substr<span class="list">(<span class="title">event</span>.target.value.lastIndexOf<span class="list">('.')</span><span class="number">+1</span>)</span><span class="comment">;</span>
+                filesData.name = event.target.value.substr<span class="list">(<span class="title">event</span>.target.value.lastIndexOf<span class="list">('\\')</span><span class="number">+1</span>)</span><span class="comment">;</span>
+                filesData.size<span class="comment">;</span>
+            }
+            me.changeFile<span class="list">(<span class="title">filesData</span>,me.renderResult)</span>
+        })</span>
+    }<span class="comment">;</span>
+    ajaxUpload.prototype.renderResult =function<span class="list">(<span class="title">result</span>,me)</span>{
+
+        if<span class="list">(<span class="title">result</span>.errno == '<span class="number">110000</span>')</span>{
+            me.status = '<span class="number">6</span>'<span class="comment">;//上传成功</span>
+            me.ele.picidEle.val<span class="list">(<span class="title">result</span>.picid)</span><span class="comment">;</span>
+            me.onSuccess<span class="list">(<span class="title">result</span>,me)</span><span class="comment">;</span>
+            me.changeMsgView<span class="list">('done')</span><span class="comment">;</span>
+        }else{
+            me.onFailure<span class="list">(<span class="title">result</span>,me)</span><span class="comment">;</span>
+            me.changeMsgView<span class="list">('fail')</span><span class="comment">;</span>
+
+            me.status = '<span class="number">5</span>'<span class="comment">;//上传失败</span>
+            me.ele.msgEle.html<span class="list">(<span class="title">result</span>.msg)</span>
+        }
+    }<span class="comment">;</span>
+    ajaxUpload.prototype.changeMsgView = function<span class="list">(<span class="title">type</span>)</span>{
+        if<span class="list">(<span class="title">type</span> == 'sending')</span>{
+            this.ele.msgEle.addClass<span class="list">('sending')</span><span class="comment">;</span>
+            this.ele.msgEle.removeClass<span class="list">('done')</span><span class="comment">;</span>
+            this.ele.msgEle.removeClass<span class="list">('fail')</span><span class="comment">;</span>
+        }else if<span class="list">(<span class="title">type</span> == 'done')</span>{
+            this.ele.msgEle.addClass<span class="list">('done')</span><span class="comment">;</span>
+            this.ele.msgEle.removeClass<span class="list">('sending')</span><span class="comment">;</span>
+            this.ele.msgEle.removeClass<span class="list">('fail')</span><span class="comment">;</span>
+        }else if<span class="list">(<span class="title">type</span> == 'fail')</span>{
+            this.ele.msgEle.addClass<span class="list">('fail')</span><span class="comment">;</span>
+            this.ele.msgEle.removeClass<span class="list">('sending')</span><span class="comment">;</span>
+            this.ele.msgEle.removeClass<span class="list">('done')</span><span class="comment">;</span>
+        }
+    }
+    ajaxUpload.prototype.changeFile =function<span class="list">(<span class="title">files</span>,callback)</span>{
+        var type = files.type.toLowerCase<span class="list">()</span>,
+            size = files.size || '',
+            name = files.name || '',
+            allowType = 'image/png'+','+'image/jpg'+','+'image/bmp'+','+'image/jpeg'+','+'image/gif',
+            err = {
+                errno:'',
+                msg:''
+            },
+            interval,
+            result = '',
+            me = this<span class="comment">;</span>
+
+            this.status = '<span class="number">1</span>'<span class="comment">;</span>
+            me.changeMsgView<span class="list">('sending')</span><span class="comment">;</span>
+            me.ele.msgEle.html<span class="list">(<span class="title">name</span>)</span><span class="comment">;</span>
+
+        if<span class="list">(<span class="title">allowType</span>.indexOf<span class="list">(<span class="title">type</span>)</span> == <span class="number">-1</span>)</span>{
+            err.msg = '文件格式错误'
+            return callback<span class="list">(<span class="title">err</span>,me)</span><span class="comment">;</span>
+        }else if<span class="list">(<span class="title">size</span> <span class="keyword">&amp;&amp;</span> size&gt;<span class="number">1024000</span>)</span>{
+            err.msg = '您上传的图片过大，请上传小于<span class="number">1</span>M的图片吧'
+            return callback<span class="list">(<span class="title">err</span>,me)</span><span class="comment">;</span>
+        }else{
+            $<span class="list">(<span class="title">this</span>.ele.formEle)</span>.submit<span class="list">()</span><span class="comment">;</span>
+            var times = <span class="number">0</span><span class="comment">;</span>
+            this.onSending <span class="keyword">&amp;&amp;</span> this.onSending<span class="list">(<span class="title">me</span>)</span><span class="comment">;</span>
+
+            interval = setInterval<span class="list">(<span class="title">function</span><span class="list">()</span>{
+
+                if<span class="list">(<span class="title">times&lt;90</span>)</span>{
+                    result = window.frames ? window.frames['ajaxUploadIframe'].ajaxUpload : me.ele.iframeEle[<span class="number">0</span>].contentDocument ? me.ele.iframeEle[<span class="number">0</span>].contentDocument.ajaxUpload: me.ele.iframeEle[<span class="number">0</span>].contentWindow ? me.ele.iframeEle[<span class="number">0</span>].contentWindow.ajaxUpload:''<span class="comment">;</span>
+                    if<span class="list">(<span class="title">result</span>)</span>{
+                        clearInterval<span class="list">(<span class="title">interval</span>)</span><span class="comment">;</span>
+                        err.msg = result.msg<span class="comment">;</span>
+                        err.errno = result.errno<span class="comment">;</span>
+                        err.picid = result.picid<span class="comment">;</span>
+                        err.name = name<span class="comment">;</span>
+                        me.status = '<span class="number">4</span>'<span class="comment">;//上传有结果</span>
+                        return callback<span class="list">(<span class="title">err</span>,me)</span><span class="comment">;</span>
+                    }
+                    times++
+                    me.status = '<span class="number">3</span>'<span class="comment">;//上传中</span>
+                }else{
+                    me.ele.msgEle.removeClass<span class="list">('sending')</span><span class="comment">;</span>
+                    me.ele.msgEle.removeClass<span class="list">('done')</span><span class="comment">;</span>
+
+                    me.status = '<span class="number">2</span>'<span class="comment">;//上传超时</span>
+                    clearInterval<span class="list">(<span class="title">interval</span>)</span>
+                    err.msg = '上传超时，请稍后再试！'<span class="comment">;</span>
+                    return callback<span class="list">(<span class="title">err</span>,me)</span><span class="comment">;</span>
+                }
+            },<span class="number">1000</span>)</span>
+        }
+    }<span class="comment">;</span>
+
+    ns.define<span class="list">('module/ajaxUpload', ajaxUpload)</span><span class="comment">;</span>
+})</span><span class="list">(<span class="title">baidu</span>, window.Pass)</span><span class="comment">;</span>
+</code></pre><p>返回上传信息的HTML代码如下：</p>
+<pre><code><span class="doctype">&lt;!doctype html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">'utf-8'</span>/&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span> &gt;</span><span class="javascript">
+    <span class="keyword">var</span> ajaxUpload = {
+        <span class="string">"errno"</span>:<span class="string">''</span>,
+        <span class="string">"msg"</span>:<span class="string">''</span>,
+        <span class="string">"picid"</span>:<span class="string">''</span>
+    }
+    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="clearfix"></div>
+          <nav id="pagination">
+  
+    <a href="/2012/11/06/3173-javascript/" class="alignleft prev"><i class="fa fa-long-arrow-left"></i>newer</a>
+  
+  
+    <a href="/2012/09/08/3151-wileetest/" class="alignright next">older<i class="fa fa-long-arrow-right"></i></a>
+  
+  <div class="clearfix"></div>
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <!-- <h1 class="title fa fa-comments"></h1> -->
+
+  
+      <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-thread-key="/2012/10/12/3153-fe/"></div>
+<!-- Duoshuo Comment END -->
+  
+</section>
+
+
+
+
+
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div>
+  
+  &copy; 2015 xiongwilee
+  
+</div>
+Powered by <a href="http://zespia.tw/hexo/" title="Hexo" target="_blank" rel="external">Hexo</a> and <a href="http://pages.github.com/" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a>
+
+<div class="clearfix"></div></footer>
+  
+<script src="/js/jquery.imagesloaded.min.js" type="text/javascript"></script>
+<script src="/js/gallery.js" type="text/javascript"></script>
+<script src="/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+
+
+
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox({
+      'titlePosition': 'inside'
+    });
+  })(jQuery);
+  </script>
+
+
+
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"xiongwilee"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = 'http://static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+
+
+</body>
+</html>

@@ -54,9 +54,7 @@ description: 清华大学web前端之原生DOM&jQuery-DOM编程讲稿
 ## 第四章：利用Chrome DevTool进行DOM调试
 
 
-## 第五章：有趣的webAPP：微信及手机活动页的开发
-
-## 随堂综合练习
+## 第五章：有趣的webAPP
 
 ## Q/A时间
 
@@ -72,7 +70,7 @@ description: 清华大学web前端之原生DOM&jQuery-DOM编程讲稿
 
 
 
-## 一、认识DOM
+## 1.1 认识DOM
 
 ### 1.1.1 DOM是什么？
 
@@ -88,7 +86,7 @@ Document Object Model，文档对象模型，可以以一种独立于平台和�
 
 
 
-## 二、DOM节点
+## 1.2 DOM节点
 
 ### 1.2.1 DOM中对节点的定义
 
@@ -144,7 +142,7 @@ Document Object Model，文档对象模型，可以以一种独立于平台和�
 
 
 
-## 三、DOM节点的查改增删
+## 1.3 DOM节点的查改增删
 
 本节将主要学习HTML DOM节点的查找、修改、创建与插入、删除等操作。
 
@@ -379,7 +377,7 @@ document.getElementById('helloWorld').remove();
 
 
 
-## 四、DOM相关的几个重要对象
+## 1.4 DOM相关的几个重要对象
 
 关于DOM操作，浏览器提供了较多内置对象，具体可以从下面文档中得到参考：
 
@@ -408,7 +406,7 @@ DOM编程中，最常用的对象，可详细了解cookie、title、URL、write(
 
 
 
-## 五、实例分析
+## 1.5 实例分析
 
 1. 纸飞机： [/demo/plane_move.html](/demo/plane_move.html)
 1. 标准时间比例的太阳系：[/demo/solar.html](/demo/solar.html)
@@ -432,7 +430,7 @@ DOM编程中，最常用的对象，可详细了解cookie、title、URL、write(
 
 
 
-## 一、事件的分类
+## 2.1 事件的分类
 
 1. ** 鼠标事件 **: click、dbclick、mousedown、mouseup、mouseover、mousemove、mouseout等
 
@@ -450,7 +448,7 @@ DOM编程中，最常用的对象，可详细了解cookie、title、URL、write(
 
 
 
-## 二、添加事件处理程序
+## 2.2 添加事件处理程序
 
 给DOM节点增加事件处理程序也有多种方法，本节都将进行简单介绍
 
@@ -527,7 +525,7 @@ btnHello.addEventListener('click',function(evt){
 
 
 
-## 三、移除事件处理程序
+## 2.3 移除事件处理程序
 
 移除的方法必须和添加的方法相对应
 
@@ -557,7 +555,7 @@ btnHello.addEventListener('click',function(evt){
 
 
 
-## 四、深入Event对象
+## 2.4 深入Event对象
 
 Event 对象代表事件的状态，比如事件在其中发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态。 事件通常与函数结合使用，函数不会在事件发生前被执行！
 
@@ -661,7 +659,7 @@ BTW：其他情况均可通过这样的方式进行事件默认行为的阻止�
 
 
 
-### 五、实例分析
+### 2.5 实例分析
 
 1. memory：http://wilee.me/demo/memory.html (来自:[codepen.io](http://codepen.io/natewiley/pen/HBrbL))
 
@@ -689,9 +687,9 @@ BTW：其他情况均可通过这样的方式进行事件默认行为的阻止�
 
 
 
-## 一、万能的$
+## 3.1 万能的$
 
-$符是jQuery的一个别名，通过它，能完成非常丰富的DOM操作，比如拿百度首页来做个小测试：
+$符是jQuery( http://jquery.com/ )的一个别名，通过它，能完成非常丰富的DOM操作，比如拿百度首页来做个小测试：
 
 给百度首页所有的A链接都增加一个点击事件，点击后弹框显示链接内容；
 并且将搜索框上方的前两个A链接颜色改为红色，第三个之后的A链接背景色改为随机。
@@ -721,18 +719,309 @@ $('#nv a')                                          // 查询到搜索框上方�
 
 
 
-## 二、jQuery选择器
+## 3.2 jQuery选择器
 
-简单介绍jQuery 选择器引擎：[sizzle](http://sizzlejs.com/)
+### 3.2.1 简单介绍选择器引擎：Sizzle
 
-### 1、 项目主页
+[Sizzle](http://sizzlejs.com/)是jQuery的御用选择器引擎，是jQuery作者John Resig写的DOM选择器引擎，速度号称业界第一。
 
-[http://sizzlejs.com/](http://sizzlejs.com/)
+*   项目主页
 
-### 2、 项目文档
+    [http://sizzlejs.com/](http://sizzlejs.com/)
 
-[https://github.com/jquery/sizzle/wiki](https://github.com/jquery/sizzle/wiki)
+*   项目文档
+
+    [https://github.com/jquery/sizzle/wiki](https://github.com/jquery/sizzle/wiki)
 
 
-### 3、示例
+*   示例
 
+|选择器|实例|选取|
+|-----|---|---|
+|<a href="/jquery/selector_all.asp" title="jQuery * 选择器">*</a>|$("*")|所有元素|
+|<a href="/jquery/selector_id.asp" title="jQuery # 选择器">#<i>id</i></a>|$("#lastname")|id="lastname" 的元素|
+|<a href="/jquery/selector_class.asp" title="jQuery . 选择器">.<i>class</i></a>|$(".intro")|所有 class="intro" 的元素|
+|<a href="/jquery/selector_element.asp" title="jQuery element 选择器"><i>element</i></a>|$("p")|所有 &lt;p&gt; 元素|
+|.<i>class</i>.<i>class</i>|$(".intro.demo")|所有 class="intro" 且 class="demo" 的元素|
+|<a href="/jquery/selector_attribute.asp" title="jQuery [attribute] 选择器">[<i>attribute</i>]</a>|$("[href]")|所有带有 href 属性的元素|
+|<a href="/jquery/selector_attribute_equal_value.asp" title="jQuery [attribute=value] 选择器">[<i>attribute</i>=<i>value</i>]</a>|$("[href='#']")|所有 href 属性的值等于 "#" 的元素|
+|<a href="/jquery/selector_attribute_notequal_value.asp" title="jQuery [attribute!=value] 选择器">[<i>attribute</i>!=<i>value</i>]</a>|$("[href!='#']")|所有 href 属性的值不等于 "#" 的元素|
+|<a href="/jquery/selector_input_enabled.asp" title="jQuery :enabled 选择器">:enabled</a>|$(":enabled")|所有激活的 input 元素|
+|<a href="/jquery/selector_input_disabled.asp" title="jQuery :disabled 选择器">:disabled</a>|$(":disabled")|所有禁用的 input 元素|
+|<a href="/jquery/selector_input_selected.asp" title="jQuery :selected 选择器">:selected</a>|$(":selected")|所有被选取的 input 元素|
+|…|||
+
+[案例分析](/demo/tsinghua_web_frontend_slider_16.html)
+
+更多选择器可以参考：[jQuery官网](https://api.jquery.com/category/selectors/) ，或者 [W3School](http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp)
+
+
+### 3.2.3 jQuery对象和DOM对象
+
+首先简单分析下jQuery源代码，搞清楚$查找出来的结果是什么样的： [$( selector, context )](https://github.com/jquery/jquery/blob/master/src/core/init.js#L65-L96)
+
+```JavaScript
+jQuery.fn.init = function(selector,context){
+        // HANDLE: $(#id)
+        } else {
+            elem = document.getElementById( match[2] );
+            if ( elem && elem.parentNode ) {
+                // Inject the element directly into the jQuery object
+                this.length = 1;
+                this[0] = elem;
+            }
+            this.context = document;
+            this.selector = selector;
+            return this;
+        }
+        // HANDLE: $(expr, $(...))
+        } else if ( !context || context.jquery ) {
+            return ( context || rootjQuery ).find( selector );
+        // HANDLE: $(expr, context)
+        } else {
+            return this.constructor( context ).find( selector );
+        }
+    // HANDLE: $(DOMElement)
+    } else if ( selector.nodeType ) {
+        this.context = this[0] = selector;
+        this.length = 1;
+        return this;
+}
+```
+
+
+从前面的代码不难总结出，jQuery DOM元素和原生DOM元素之间存在这样的关系：
+
+** 从jQuery对象转换为DOM对象： **
+
+```JavaScript
+// 获取 id=helloWorld 节点的jQuery对象
+var jqDom = $('#helloWorld');
+// 从jQuery对象中提取原生DOM
+var el = jqDom[0];
+// 或者通过jQuery对象提供的get(index)方法
+var el = jqDom.get(0);
+```
+** 从DOM对象转换为jQuery对象: **
+
+```JavaScript
+// 获取 id=helloWorld 节点的原生对象
+var el = document.getElementById('helloWorld');
+// 转 jQuery 对象，直接用 $ 包装一下即可（参考前面jQuery.fn.init方法中的实现）
+var jqDom = $(el);
+```
+
+另外，必须知道jQuery提供的each等遍历方法，获取到的item都是原生DOM：
+
+```JavaScript
+// 获取所有 class=x-hello 的标签，并遍历进行单独处理
+$('.x-hello').each(function(index,item){
+    // 这里的 item 是DOM原生对象，也可以用 this 获取
+    // 将每个 item 作为jQuery对象来使用
+    $(item);    // or $(this);
+});
+```
+
+
+
+## 3.3 DOM节点的增加与移除
+
+### 3.3.1 jQuery操作DOM的一些常用方法：
+
+|方法 | 描述|
+|--|--|
+|addClass()|向匹配的元素添加指定的类名。|
+|after()|在匹配的元素之后插入内容。|
+|append()|  向匹配元素集合中的每个元素结尾插入由参数指定的内容。|
+|appendTo()|向目标结尾插入匹配元素集合中的每个元素。|
+|attr()|设置或返回匹配元素的属性和值。|
+|before()|  在每个匹配的元素之前插入内容。|
+|clone()| 创建匹配元素集合的副本。|
+|empty()| 删除匹配的元素集合中所有的子节点。|
+|hasClass()|检查匹配的元素是否拥有指定的类。|
+|…||
+
+更多DOM操作的方法可以参考：[jQuery官网](http://api.jquery.com/category/manipulation/) ，或者 [W3School](http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp)
+
+
+### 3.3.2 如何创建jQuery DOM节点
+
+通过 $(htmlContent) 的方式创建jQuery节点
+
+```JavaScript
+// 创建一个 div 节点
+$('<div/>');
+ 
+// 创建一个 id=helloWorld，class=x-hello 的div节点
+$('<div id="helloWorld" class="x-hello"/>');
+ 
+// 或者用原生DOM的方式先创建，再包装成jQuery DOM（如果有这个需要的话）
+var div = document.createElement('div');
+div.id = 'helloWorld';
+div.className = 'x-hello';
+var jqDiv = $(div);
+```
+
+### 3.3.3 用append、appendTo或prepend、prependTo将DOM添加到页面
+
+```JavaScript
+// 创建一个 id=helloWorld，class=x-hello 的div节点
+var jqDiv = $('<div id="helloWorld" class="x-hello"/>');
+ 
+// 通过 append 添加到页面
+$('body').append(jqDiv);
+ 
+// 通过appendTo添加到页面
+jqDiv.appendTo('body');
+```
+
+[案例分析](/demo/tsinghua_web_frontend_slider_7.html)
+
+其他添加DOM节点的API这里就不列举了，课后可单独练习。
+
+
+### 3.3.4 DOM节点移除
+
+```JavaScript
+// 将 id=helloWorld、class=x-hello、以及所有strong标签都删掉
+$('#helloWorld, .x-hello, strong').remove();
+ 
+// 将 div#container 下的所有子节点都删掉
+$('#container').empty();
+```
+
+可结合前面章节讲到的原生DOM操作，思考jQuery中这些API的实现原理。
+
+其他添加DOM节点的API这里就不列举了，课后可单独练习。
+
+
+
+## 3.4 DOM属性与CSS操作
+
+### 3.4.1 DOM属性
+
+|方法|描述|
+|--|--|
+|addClass()|    向匹配的元素添加指定的类名。|
+|attr()|    设置或返回匹配元素的属性和值。|
+|hasClass()|    检查匹配的元素是否拥有指定的类。|
+|html()|    设置或返回匹配的元素集合中的 HTML 内容。|
+|removeAttr()|  从所有匹配的元素中移除指定的属性。|
+|removeClass()| 从所有匹配的元素中删除全部或者指定的类。|
+|toggleClass()| 从匹配的元素中添加或删除一个类。|
+|val()| 设置或返回匹配元素的值。|
+
+[案例分析](/demo/tsinghua_web_frontend_slider_5.html)
+
+更多DOM属性操作可以参考：[jQuery官网](http://api.jquery.com/category/attributes/) ，或者 [W3School](http://www.w3school.com.cn/jquery/jquery_ref_attributes.asp)
+
+
+### 3.4.2 CSS操作
+
+|CSS 属性|描述|
+|--|--|
+|css()|   设置或返回匹配元素的样式属性。|
+|height()|    设置或返回匹配元素的高度。|
+|offset()|    返回第一个匹配元素相对于文档的位置。|
+|offsetParent()|  返回最近的定位祖先元素。|
+|position()|  返回第一个匹配元素相对于父元素的位置。|
+|scrollLeft()|    设置或返回匹配元素相对滚动条左侧的偏移。|
+|scrollTop()| 设置或返回匹配元素相对滚动条顶部的偏移。|
+|width()| 设置或返回匹配元素的宽度。|
+
+[案例分析](/demo/tsinghua_web_frontend_slider_5.html)
+
+更多CSS操作可以参考：[jQuery官网](http://api.jquery.com/category/css/) ，或者 [W3School](http://www.w3school.com.cn/jquery/jquery_ref_css.asp)
+
+
+### 3.4.3 数据操作
+
+这些方法允许我们将指定的 DOM 元素与任意数据相关联。
+
+|方法名|功能|
+|--|--|
+|.data()| 存储与匹配元素相关的任意数据。|
+|jQuery.data()|   存储与指定元素相关的任意数据。|
+|.removeData()|   移除之前存放的数据。|
+|jQuery.removeData()| 移除之前存放的数据。|
+
+更多数据操作可以参考：[jQuery官网](http://api.jquery.com/category/data/) ，或者 [W3School](http://www.w3school.com.cn/jquery/jquery_ref_data.asp)
+
+
+
+## 3.5 jQuery事件处理
+
+事件方法会触发匹配元素的事件，或将函数绑定到所有匹配元素的某个事件。
+
+*   触发实例：
+
+    ```JavaScript
+    $(document.body).click()
+    ```
+
+    上面的例子将触发 body 元素的 click 事件。
+
+*   绑定实例：
+
+    ```JavaScript
+    $(document.body).click(function(){$(this).hide()})
+    ```
+
+
+### 3.5.1 jQuery事件类型、事件对象、事件绑定和触发的方法
+
+### 3.5.2 在事件绑定时传递参数
+
+### 3.5.3 在jQuery事件中处理冒泡和默认行为
+
+### 3.5.4 事件委托
+
+
+
+## 3.6 jQuery动画
+
+*   隐藏显示
+
+    .hide()、.show()、.toggle()
+
+*   淡入淡出
+
+    .fadeIn()、.fadeOut()、.fadeTo()、.fadeToggle()
+
+*   自定义
+
+    .animate()、.clearQueue()、.delay()、.dequeue()
+    jQuery.dequeue()、.finish()
+    …
+ 
+*   滑动
+
+    .slideDown()、.slideToggle()、.slideUp()
+
+[jQuery官网](http://api.jquery.com/animate/)
+
+
+
+## 第四章：利用Chrome DevTool进行DOM调试
+
+<center>![/image/post/tsinghua_web_frontend_slider/devtool.png](/image/post/tsinghua_web_frontend_slider/devtool.png)</center>
+
+
+
+## 第五章：有趣的webAPP
+
+*   本幻灯片、主题页
+    
+    http://wilee.me/2015/06/10/tsinghua_web_frontend_slider/
+
+    http://passport.baidu.com/export/multi/index.html
+
+*   活动页、游戏
+
+    http://e.paipai.com/2015/618torture/index.html?from=timeline&isappinstalled=0
+
+    http://m.meilishuo.com/wx/mew_lucky/main?frm=catred_from_goqunred
+
+
+
+## Q/A
