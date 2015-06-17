@@ -977,6 +977,14 @@ $('#container').empty();
 
 事件方法会触发匹配元素的事件，或将函数绑定到所有匹配元素的某个事件。
 
+*   绑定实例：
+
+    ```JavaScript
+    $(document.body).click(function(event){
+        $(this).hide();
+    })
+    ```
+
 *   触发实例：
 
     ```JavaScript
@@ -985,20 +993,171 @@ $('#container').empty();
 
     上面的例子将触发 body 元素的 click 事件。
 
-*   绑定实例：
 
-    ```JavaScript
-    $(document.body).click(function(){$(this).hide()})
-    ```
+### 3.5.1 jQuery事件的相关方法
+
+*   ** 浏览器事件 **
+    .resize()、.scroll()
+
+*   ** 表单事件 **
+    .blur()、.change()、.focus()、.select()、.submit()
+
+*   ** 键盘事件 **
+    .keydown()、.keypress()、.keyup()
+
+*   ** 鼠标事件 **
+    .click()、.dblclick()、.focusin()、.focusout()、.hover()、.mousedown()、.mouseenter()、.mouseleave()、.mousemove()、.mouseout()、.mouseover()、.mouseup()
+
+*   ** 文档加载 **
+    .holdReady()、.ready()
+
+*   ** 事件对象 **
+    event.currentTarget、event.data、event.isDefaultPrevented() …
+
+*   ** 事件绑定 **
+    .bind()、.delegate()、.off()、.on()、.one()、.trigger()、.triggerHandler()、.unbind()、.undelegate()
 
 
-### 3.5.1 jQuery事件类型、事件对象、事件绑定和触发的方法
+### 3.5.1 添加事件监听
 
-### 3.5.2 在事件绑定时传递参数
+#### 3.5.1.1 通过jQuery对象的事件方法
 
-### 3.5.3 在jQuery事件中处理冒泡和默认行为
+```JavaScript
+// 给 id=helloWorld 的节点增加mousedown、mouseup事件
+$('#helloWorld').mousedown(function(e){
+    // TODO ...
+}).mouseup(function(e){
+    // TODo ...
+});
+```
 
-### 3.5.4 事件委托
+#### 3.5.1.2 通过bind或者on方式绑定事件，包括自定义事件
+
+```JavaScript
+//给 id=helloWord 的节点绑定mousedown事件
+$('#helloWorld').on('click',function(){
+    console.log(this);
+})
+
+// 给 id=helloWorld 的节点增加mousedown、mouseup事件，以及自定义事件：sayHello
+$('#helloWorld').bind({
+    mousedown : function(e){
+        // TODO ...
+    },
+    mouseup : function(e){
+        // TODO ...
+    },
+    sayHello : function(e){ // 自定义事件
+        // TODO ...
+    }
+});
+```
+
+
+#### 3.5.1.3 事件委托/代理
+
+如果要对非常多的节点进行事件绑定，或者如果新增节点需要绑定事件，例如：
+
+```HTML
+<table>
+    <tr><td>数据0001</td><td><button class="delete">删除</button></td></tr>
+    <tr><td>数据0002</td><td><button class="delete">删除</button></td></tr>
+    ……
+    <tr><td>数据1000</td><td><button class="delete">删除</button></td></tr>
+</table>
+```
+
+这时候就可以采用事件委托的办法：
+
+```JavaScript
+$('table').on('click','.delete',function(event){
+    console.log(this);
+})
+```
+
+事件委托可以用在这两种场景：
+ 
+1. 需要对非常多节点进行事件绑定，例如：上面案例中的table中的删除按钮
+2. 需要对新增的节点进行事件绑定，例如：瀑布流的交互中，对新增的元素绑定事件；就不需要对新增的节点再去绑定事件了
+
+
+### 3.5.2 触发事件
+
+#### 3.5.2.1 通过trigger触发
+
+```JavaScript
+// 触发 id=hellWorld 节点的 mouseup, sayHello 事件
+$('#helloWorld').trigger('mouseup').trigger('sayHello');
+```
+
+#### 3.5.2.2 浏览器操作触发
+
+
+### 3.5.3 在事件绑定时传递参数
+
+有时候有种特殊需求，在事件处理的handler中需要用到外界的数据，于是可以这样做：
+
+```JavaScript
+var message = 'Hi,I am Alien!';
+$('#helloWorld').click({msg : message},function(e){
+    // 通过 e.data 的方式来获取handler绑定时传入的参数
+    alert(e.data.msg);
+});
+```
+
+可能还有更变态的需求，希望在事件触发时动态传入参数，比如自定义事件：
+
+```JavaScript
+// 当 sayHello 事件触发的时候，显示 message
+$('#helloWorld').bind('sayHello',function(e, name, message) {
+    // 动态的输出 message
+    alert(name + ',' + message);
+});
+ 
+// 强制触发 sayHello 的时候，动态指定 message
+// 注意，trigger的第二个参数是一个 Array，代表 eventHandler第一个参数之后的所有参数
+$('#hellWorld').trigger('sayHello', [ 'John', 'Hi,I am Alien!' ] );
+```
+
+感兴趣的同学，课后可练习一下
+
+
+### 3.5.4 在jQuery事件中处理冒泡和默认行为
+
+jQuery已经处理完了所有浏览器的兼容性，所以直接用标准的方法来操作就行
+
+```JavaScript
+// id=helloWorld 的节点点击后，阻止事件冒泡
+$('#helloWorld').click(function(e){
+    // TODO ...
+ 
+    // 阻止冒泡
+    e.stopPropagation();
+});
+ 
+// 表单 form#info 提交时，如果数据不合法则取消提交
+$('form#info').submit(function(e){
+    // 验证表单
+    var isValid = validateTheForm(this);
+ 
+    // 如果不合法，则取消提交
+    if(!isValid){
+        e.preventDefault();
+    }
+});
+```
+
+当然，如果你的需求是阻止事件冒泡，并且取消事件的默认行为，则可以直接 return false
+
+```JavaScript
+// 用 a 标签做了个按钮，点击时需要阻止事件冒泡，同时取消默认的跳转行为
+$('a.btn').click(function(e){
+    // TODO ...
+ 
+    return false;
+
+})
+```
 
 
 
@@ -1029,6 +1188,19 @@ $('#container').empty();
 ## 第四章：利用Chrome DevTool进行DOM调试
 
 <center>![/image/post/tsinghua_web_frontend_slider/devtool.png](/image/post/tsinghua_web_frontend_slider/devtool.png)</center>
+
+
+*   查看DOM结构
+
+*   查看网络请求
+
+*   查看加载资源
+
+*   JavaScript错误调试
+    
+    http://life.tsinghua.edu.cn/
+
+*   WebAPP模拟调试
 
 
 
