@@ -74,7 +74,7 @@ description: 清华大学web前端之原生DOM&jQuery-DOM编程讲稿
 
 ### 1.1.1 DOM是什么？
 
-Document Object Model，文档对象模型，可以以一种独立于平台和语言的方式访问和修改一个文档的内容和结构，是表示和处理一个HTML或XML文档的常用方法。
+Document Object Model(文档对象模型),可以以一种独立于平台和语言的方式访问和修改一个文档的内容和结构，是表示和处理一个HTML或XML文档的常用方法。
 
 ### 1.1.2 DOM能做什么？
 
