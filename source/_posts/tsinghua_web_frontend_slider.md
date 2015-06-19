@@ -56,6 +56,8 @@ description: 清华大学web前端之原生DOM&jQuery-DOM编程讲稿
 
 ## 第五章：有趣的webAPP
 
+## 随堂综合练习
+
 ## Q/A时间
 
 
@@ -427,6 +429,15 @@ DOM编程中，最常用的对象，可详细了解cookie、title、URL、write(
 ### 2.4 深入Event
 
 ### 2.5 实例分析
+
+
+当DOM被绑定时间之后会产生什么样的神奇功能：
+
+1. memory：http://wilee.me/demo/memory.html (来自:[codepen.io](http://codepen.io/natewiley/pen/HBrbL))
+
+1. Flappy Dragon：http://js1k.com/2014-dragons/demo/1659
+
+1. 2048：http://js1k.com/2014-dragons/demo/1824
 
 
 
@@ -1166,34 +1177,63 @@ $('a.btn').click(function(e){
 <center>![/image/post/tsinghua_web_frontend_slider/devtool.png](/image/post/tsinghua_web_frontend_slider/devtool.png)</center>
 
 
-*   查看DOM结构
+### 4.1 查看DOM结构
 
-*   查看网络请求
+![/image/post/tsinghua_web_frontend_slider/devtool_1.png](/image/post/tsinghua_web_frontend_slider/devtool_1.png)
 
-*   查看加载资源
 
-*   JavaScript错误调试
-    
+### 4.2 查看网络请求
+
+![/image/post/tsinghua_web_frontend_slider/devtool_2.png](/image/post/tsinghua_web_frontend_slider/devtool_2.png)
+
+
+### 4.3 查看加载资源
+
+![/image/post/tsinghua_web_frontend_slider/devtool_3.png](/image/post/tsinghua_web_frontend_slider/devtool_3.png)
+
+
+### 4.4 JavaScript错误调试
+
+![/image/post/tsinghua_web_frontend_slider/devtool_4.png](/image/post/tsinghua_web_frontend_slider/devtool_4.png)
+
+
+* 案例分析：
+
+    [/demo/tsinghua_web_frontend_slider_17.html](/demo/tsinghua_web_frontend_slider_17.html)
+
+* 实战操作：
+
     http://life.tsinghua.edu.cn/
 
-*   WebAPP模拟调试
+
+### 4.5 WebAPP模拟调试
+
+![/image/post/tsinghua_web_frontend_slider/devtool_5.png](/image/post/tsinghua_web_frontend_slider/devtool_5.png)
 
 
 
 ## 第五章：有趣的webAPP
 
-*   本幻灯片、主题页
+*   案例分析
     
     http://wilee.me/2015/06/10/tsinghua_web_frontend_slider/
 
     http://passport.baidu.com/export/multi/index.html
 
-*   活动页、游戏
+    http://m.meilishuo.com/wx/mew_lucky/main?frm=catred_from_goqunred
+
+*   综合讨论
 
     http://e.paipai.com/2015/618torture/index.html?from=timeline&isappinstalled=0
 
-    http://m.meilishuo.com/wx/mew_lucky/main?frm=catred_from_goqunred
 
+
+## 随堂综合练习
+
+如下是2013年Google I/O大会上关于实时WEB应用的一个简短视频，在多个端（pad、phone、pc）上同时打开网页， 并拼接一个环形赛车跑道，玩家可以在这个跑道上进行赛车游戏。请看完视频后， 结合本次DOM编程的相关知识，分析该功能的实现原理
+<div class="x-container" style="height:500px;">
+    <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" src="/image/post/tsinghua_web_frontend_slider/google-io-realtime-app.swf?v=1fe2fccd" width="100%" height="100%" align="none" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true">
+</div>
 
 
 ## Q/A
