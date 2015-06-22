@@ -431,7 +431,7 @@ DOM编程中，最常用的对象，可详细了解cookie、title、URL、write(
 ### 2.5 实例分析
 
 
-当DOM被绑定时间之后会产生什么样的神奇功能：
+当DOM被绑定事件之后会产生什么样的神奇功能：
 
 1. memory：http://wilee.me/demo/memory.html (来自:[codepen.io](http://codepen.io/natewiley/pen/HBrbL))
 
