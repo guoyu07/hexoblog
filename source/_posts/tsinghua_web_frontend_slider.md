@@ -117,7 +117,7 @@ Document Object Model(文档对象模型),可以以一种独立于平台和语�
 |注释|Node.COMMENT_NODE|8|
 |文档|Node.DOCUMENT_NODE|9|
 
-[案例分析](/demo/tsinghua_web_frontend_slider_1.html)
+[案例分析](http://codepen.io/xiongwilee/pen/NqYaVW?editors=100)
 
 
 ### 1.2.3 节点层次
@@ -168,7 +168,7 @@ var slides = document.getElementsByClassName('slide');
 
 感兴趣的可以再试试：querySelector、querySelectorAll
 
-[案例分析](/demo/tsinghua_web_frontend_slider_2.html)
+[案例分析](http://codepen.io/xiongwilee/pen/zGWPYE?editors=101)
 
 
 #### 1.3.1.2 访问父节点与子节点
@@ -196,7 +196,7 @@ var lastChildForHelloWorld = helloWorld.lastChild;
 
 ** firstChild和lastChild都是获取所有类型的Node，而不仅仅是ElementNode。 **
 
-[案例分析](/demo/tsinghua_web_frontend_slider_3.html)
+[案例分析](http://codepen.io/xiongwilee/pen/wamPBv?editors=101)
 
 
 #### 1.3.1.3 访问兄弟节点
@@ -218,7 +218,7 @@ var nextNodeForHelloWorld = helloWorld.nextSibling;
 
 如果只想获取ElementNode，可以使用previousElementSibling和nextElementSilbling方法， 但这两个属性不是w3c标准，存在浏览器兼容性问题，慎用。
 
-[案例分析](/demo/tsinghua_web_frontend_slider_4.html)
+[案例分析](http://codepen.io/xiongwilee/pen/NqYwqq?editors=101)
 
 
 ### 1.3.2 节点修改
@@ -244,7 +244,7 @@ helloWorld.setAttribute('href','http://www.baidu.com');
 helloWorld.href = 'http://www.baidu.com';
 ```
 
-[案例分析](/demo/tsinghua_web_frontend_slider_5.html)
+[案例分析](http://codepen.io/xiongwilee/pen/qdoVdK?editors=101)
 
 
 关于节点CSS class的访问，在HTML5标准中新增了classList API，该API中新增了CSS class的add、remove、contains、item、toggle等方法
@@ -282,7 +282,7 @@ helloWorld.innerHTML = '<img src="static/img/picture.png" alt="图片"/>';
     helloWorld.textContent = '清华大学';
     ```
 
-[案例分析](/demo/tsinghua_web_frontend_slider_6.html)
+[案例分析](http://codepen.io/xiongwilee/pen/PqROqM?editors=101)
 
 
 #### 1.3.2.3 增加新节点
@@ -312,7 +312,7 @@ helloWorld.appendChild(imgElement); // 采用子节点追加的方式插入文�
 
 ** 当有大批量的DOM节点需要插入到文档流中，需要用DocumentFragment来实现 **
 
-[案例分析](/demo/tsinghua_web_frontend_slider_7.html)
+[案例分析](http://codepen.io/xiongwilee/pen/KpoyVg?editors=101)
 
 
 通过上面的DOM操作，文档片段将发生如下的变化：
@@ -375,7 +375,7 @@ helloWorld.parentNode.removeChild(helloWorld); // 注意参数
 document.getElementById('helloWorld').remove();
 ```
 
-[实例分析](/demo/tsinghua_web_frontend_slider_8.html)
+[实例分析](http://codepen.io/xiongwilee/pen/oXqobP?editors=101)
 
 
 
@@ -480,7 +480,7 @@ var myClickFunc = function(evt){
 };
 ```
 
-[实例分析](/demo/tsinghua_web_frontend_slider_9.html)
+[实例分析](http://codepen.io/xiongwilee/pen/PqROZM?editors=101)
 
 
 ### 2.2.2 通过节点属性动态绑定
@@ -502,7 +502,7 @@ var myClickFunc = function(evt){
 document.getElementById('btnHello').onclick = myClickFunc;
 ```
 
-[实例分析](/demo/tsinghua_web_frontend_slider_10.html)
+[实例分析](http://codepen.io/xiongwilee/pen/NqYwrx?editors=101)
 
 
 ### 2.2.3 通过事件监听的方式
@@ -532,7 +532,7 @@ btnHello.addEventListener('click',function(evt){
 
 ** 通过此种形式，可以给btnHello按钮绑定任意多个click监听； 注意，执行顺序与添加顺序相关 **
 
-[实例分析](/demo/tsinghua_web_frontend_slider_11.html)
+[实例分析](http://codepen.io/xiongwilee/pen/jPzarM?editors=101)
 
 
 
@@ -562,7 +562,7 @@ btnHello.addEventListener('click',function(evt){
     // 移除事件监听
     btnHello.removeEventListener('click',myClickFunc1,false); // 指定句柄
     ```
-[实例分析](/demo/tsinghua_web_frontend_slider_12.html)
+[实例分析](http://codepen.io/xiongwilee/pen/MwVOem?editors=101)
 
 
 
@@ -611,7 +611,7 @@ document.body.addEventListener('click',function(evt){
 
 在这种情况下，点击按钮“ClickMe”后，其自身的click事件会被触发，同时，该事件将会继续向上传播， 所有的祖先节点都将得到事件的触发命令，并立即触发自己的click事件；所以如上代码，将会连续弹出两个alert
 
-[实例分析](/demo/tsinghua_web_frontend_slider_13.html)
+[实例分析](http://codepen.io/xiongwilee/pen/aOYVZY?editors=101)
 
 
 有些情况下，我们的需求要求，每个事件都是独立触发，所以我们必须阻止事件冒泡，针对如上示例代码，可改造为：
@@ -637,7 +637,7 @@ document.body.addEventListener('click',function(evt){
 
 *   不同的浏览器，阻止冒泡的方式也不一样，在w3c标准中，通过event.stopPropagation()完成， 在IE中则是通过自身的event.cancelBubble=true来完成
 
-[实例分析](/demo/tsinghua_web_frontend_slider_14.html)
+[实例分析](http://codepen.io/xiongwilee/pen/YXaEWB?editors=101)
 
 
 ### 2.4.3 事件默认行为
@@ -666,7 +666,7 @@ document.getElementById('linkToBaidu').addEventListener('click',function(evt){
 
 BTW：其他情况均可通过这样的方式进行事件默认行为的阻止，至于阻止的方法，在不同浏览器中会存在差异，后续章节将会介绍兼容性的处理办法
 
-[实例分析](/demo/tsinghua_web_frontend_slider_15.html)
+[实例分析](http://codepen.io/xiongwilee/pen/mJxqEY?editors=101)
 
 
 
@@ -762,7 +762,7 @@ $('#nv a')                                          // 查询到搜索框上方�
 |<a href="/jquery/selector_input_selected.asp" title="jQuery :selected 选择器">:selected</a>|$(":selected")|所有被选取的 input 元素|
 |…|||
 
-[案例分析](/demo/tsinghua_web_frontend_slider_16.html)
+[案例分析](http://codepen.io/xiongwilee/pen/BNrmLy?editors=101)
 
 更多选择器可以参考：[jQuery官网](https://api.jquery.com/category/selectors/) ，或者 [W3School](http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp)
 
@@ -922,7 +922,7 @@ $('#container').empty();
 |toggleClass()| 从匹配的元素中添加或删除一个类。|
 |val()| 设置或返回匹配元素的值。|
 
-[案例分析](/demo/tsinghua_web_frontend_slider_5.html)
+[案例分析](http://codepen.io/xiongwilee/pen/qdoVdK?editors=101)
 
 更多DOM属性操作可以参考：[jQuery官网](http://api.jquery.com/category/attributes/) ，或者 [W3School](http://www.w3school.com.cn/jquery/jquery_ref_attributes.asp)
 
@@ -940,7 +940,7 @@ $('#container').empty();
 |scrollTop()| 设置或返回匹配元素相对滚动条顶部的偏移。|
 |width()| 设置或返回匹配元素的宽度。|
 
-[案例分析](/demo/tsinghua_web_frontend_slider_5.html)
+[案例分析](http://codepen.io/xiongwilee/pen/qdoVdK?editors=101)
 
 更多CSS操作可以参考：[jQuery官网](http://api.jquery.com/category/css/) ，或者 [W3School](http://www.w3school.com.cn/jquery/jquery_ref_css.asp)
 
@@ -1199,7 +1199,7 @@ $('a.btn').click(function(e){
 
 * 案例分析：
 
-    [/demo/tsinghua_web_frontend_slider_17.html](/demo/tsinghua_web_frontend_slider_17.html)
+    [http://codepen.io/xiongwilee/pen/bdvYwV](http://codepen.io/xiongwilee/pen/bdvYwV)
 
 * 实战操作：
 
@@ -1213,6 +1213,10 @@ $('a.btn').click(function(e){
 
 
 ## 第五章：有趣的webAPP
+
+** webApp 并不是H5(HTML5) ** 而是采用HTML5、CSS3等技术手段实现的跨终端Web页面。
+
+### 5.1 浏览器
 
 *   案例分析
     
@@ -1231,9 +1235,9 @@ $('a.btn').click(function(e){
 ## 随堂综合练习
 
 如下是2013年Google I/O大会上关于实时WEB应用的一个简短视频，在多个端（pad、phone、pc）上同时打开网页， 并拼接一个环形赛车跑道，玩家可以在这个跑道上进行赛车游戏。请看完视频后， 结合本次DOM编程的相关知识，分析该功能的实现原理
-<div class="x-container" style="height:500px;">
-    <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" src="/image/post/tsinghua_web_frontend_slider/google-io-realtime-app.swf?v=1fe2fccd" width="100%" height="100%" align="none" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true">
-</div>
+
+[查看视频 <i class="fa fa-play-circle"></i>](/demo/tsinghua_web_frontend_slider_18.html)
+
 
 
 ## Q/A
