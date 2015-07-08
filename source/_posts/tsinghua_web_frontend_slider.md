@@ -1199,7 +1199,7 @@ $('a.btn').click(function(e){
 
 * 案例分析：
 
-    [http://codepen.io/xiongwilee/pen/bdvYwV](http://codepen.io/xiongwilee/pen/bdvYwV)
+    [http://codepen.io/xiongwilee/pen/bdvYwV?editors=101](http://codepen.io/xiongwilee/pen/bdvYwV?editors=101)
 
 * 实战操作：
 
@@ -1214,9 +1214,16 @@ $('a.btn').click(function(e){
 
 ## 第五章：有趣的webAPP
 
-** webApp 并不是H5(HTML5) ** 而是采用HTML5、CSS3等技术手段实现的跨终端Web页面。
+** webApp 并不是H5(HTML5) ** 而是采用HTML5、CSS3等技术手段实现的跨终端Web页面。（本章只简单介绍在PC Web开发的基础上进行移动端Web开发的一些差异，如果有兴趣可以参看HTML5，WebApp开发的相关的书籍。）
 
-### 5.1 浏览器
+### 5.1 页面布局
+
+同样的DOM结构需要适配在不同尺寸的终端上（响应式设计）。
+
+### 5.2 事件
+
+### 5.3 基础库
+
 
 *   案例分析
     
