@@ -703,7 +703,7 @@ BTW：其他情况均可通过这样的方式进行事件默认行为的阻止�
 $符是jQuery( http://jquery.com/ )的一个别名，通过它，能完成非常丰富的DOM操作，比如拿百度首页来做个小测试：
 
 给百度首页所有的A链接都增加一个点击事件，点击后弹框显示链接内容；
-并且将搜索框上方的前两个A链接颜色改为红色，第三个之后的A链接背景色改为随机。
+并且将页面右上方的前两个A链接颜色改为红色，第三个之后的A链接背景色改为随机。
 
 ```JavaScript
 // 给所有的A标签都增加点击事件
@@ -719,8 +719,8 @@ var getRandomColor = function(){
         + (new Number(Math.floor(Math.random() * 256))).toString(16)
         + (new Number(Math.floor(Math.random() * 256))).toString(16);
 };
-// 将搜索框上方的A标签改成不同颜色
-$('#nv a')                                          // 查询到搜索框上方的所有A链接
+// 将页面右上方的A标签改成不同颜色
+$('#u1 a')                                          // 查询到搜索框上方的所有A链接
     .filter(':lt(2)').css('color','#f00')           // 将前两个A标签颜色改成红色
     .end()
     .filter(':gt(2)').each(function(){             // 将第三个标签之后的全部标签背景色改为随机
@@ -1222,7 +1222,11 @@ $('a.btn').click(function(e){
 
 ### 5.2 事件
 
+新增orientationchange、touchstart、touchmove、touchend等事件。
+
 ### 5.3 基础库
+
+在webApp上更倾向于Zepto、jQuery mobil等轻量级的基础库。
 
 
 *   案例分析
