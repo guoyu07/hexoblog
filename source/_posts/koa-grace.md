@@ -495,7 +495,6 @@ module.exports = {
 今天讲的所有内容都是**19天**内搞定的！！！
 
 
-
 19天：**研究node异步** + **研究koa** + **开发koa-grace** + **开发CMS:http://mlsfe.biz**
 
 
