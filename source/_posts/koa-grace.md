@@ -117,6 +117,8 @@ function* gen(x){
 co(gen,1);
 ```
 
+【参考】 https://github.com/tj/co
+
 
 
 异步并发：
@@ -147,8 +149,6 @@ ES7提供了async函数，使得异步操作变得更加方便。
 
 
 但是，你这么理解：co模块就是async/await的语法糖。
-
-【参考】 https://github.com/tj/co
 
 
 
@@ -498,7 +498,7 @@ module.exports = {
 19天：**研究node异步** + **研究koa** + **开发koa-grace** + **开发CMS:http://mlsfe.biz**
 
 
-名字的来历：**女朋友的英文名（Grace Wang）,同时正好koa-grace在2月14号发布**。
+名字的来历：**女朋友的英文名（Grace Wang）,正好koa-grace在2月14号发布**。
 
 
 
